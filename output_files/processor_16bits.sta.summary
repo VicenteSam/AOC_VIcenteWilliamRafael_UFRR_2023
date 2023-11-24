@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clock'
+Slack : -9.097
+TNS   : -316.306
+
+Type  : Slow 1100mV 85C Model Setup 'PC:port_map_pc|outPort[0]'
+Slack : -8.828
+TNS   : -8.828
+
+Type  : Slow 1100mV 85C Model Hold 'clock'
+Slack : 0.076
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'PC:port_map_pc|outPort[0]'
+Slack : 1.853
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -3.166
+TNS   : -133.759
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'PC:port_map_pc|outPort[0]'
+Slack : -0.313
+TNS   : -1.527
+
+Type  : Slow 1100mV 0C Model Setup 'clock'
+Slack : -8.982
+TNS   : -313.057
+
+Type  : Slow 1100mV 0C Model Setup 'PC:port_map_pc|outPort[0]'
+Slack : -8.742
+TNS   : -8.742
+
+Type  : Slow 1100mV 0C Model Hold 'clock'
+Slack : -0.152
+TNS   : -0.152
+
+Type  : Slow 1100mV 0C Model Hold 'PC:port_map_pc|outPort[0]'
+Slack : 1.744
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -3.166
+TNS   : -133.917
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'PC:port_map_pc|outPort[0]'
+Slack : -0.302
+TNS   : -1.308
+
+Type  : Fast 1100mV 85C Model Setup 'clock'
+Slack : -3.735
+TNS   : -135.614
+
+Type  : Fast 1100mV 85C Model Setup 'PC:port_map_pc|outPort[0]'
+Slack : -3.338
+TNS   : -3.338
+
+Type  : Fast 1100mV 85C Model Hold 'clock'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'PC:port_map_pc|outPort[0]'
+Slack : 0.705
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock'
+Slack : -2.174
+TNS   : -67.290
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'PC:port_map_pc|outPort[0]'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock'
+Slack : -3.200
+TNS   : -114.335
+
+Type  : Fast 1100mV 0C Model Setup 'PC:port_map_pc|outPort[0]'
+Slack : -3.013
+TNS   : -3.013
+
+Type  : Fast 1100mV 0C Model Hold 'clock'
+Slack : -0.062
+TNS   : -0.065
+
+Type  : Fast 1100mV 0C Model Hold 'PC:port_map_pc|outPort[0]'
+Slack : 0.650
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock'
+Slack : -2.174
+TNS   : -67.368
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'PC:port_map_pc|outPort[0]'
+Slack : 0.219
+TNS   : 0.000
+
+------------------------------------------------------------
