@@ -1,5 +1,5 @@
-|Qualcom_LI
-clock => add1:port_map_addr.clock
+|Trinity
+clock => somador:port_map_addr.clock
 clock => PC:port_map_pc.clock
 clock => rom_memory:port_map_rom.clock
 clock => unidade_controle:port_map_unidade_de_controle.clock
@@ -136,7 +136,7 @@ out_out_mult4_2X1_ram_ula[14] << multiplexador:port_map_mult4_2x1_ram_ula.Sout[1
 out_out_mult4_2X1_ram_ula[15] << multiplexador:port_map_mult4_2x1_ram_ula.Sout[15]
 
 
-|Qualcom_LI|add1:port_map_addr
+|Trinity|somador:port_map_addr
 clock => ~NO_FANOUT~
 inPort[0] => Add0.IN32
 inPort[1] => Add0.IN31
@@ -172,7 +172,7 @@ outPort[14] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 outPort[15] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|PC:port_map_pc
+|Trinity|PC:port_map_pc
 clock => outPort[0]~reg0.CLK
 clock => outPort[1]~reg0.CLK
 clock => outPort[2]~reg0.CLK
@@ -223,7 +223,7 @@ outPort[14] <= outPort[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 outPort[15] <= outPort[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|rom_memory:port_map_rom
+|Trinity|rom_memory:port_map_rom
 in_data[0] => rom_memory.RADDR
 in_data[1] => rom_memory.RADDR1
 in_data[2] => rom_memory.RADDR2
@@ -259,7 +259,7 @@ out_data[14] <= rom_memory.DATAOUT14
 out_data[15] <= rom_memory.DATAOUT15
 
 
-|Qualcom_LI|divisao_instrucao:port_map_divisao_intrucao
+|Trinity|divisao_instrucao:port_map_divisao_intrucao
 in_port[0] => out_jump[0].DATAIN
 in_port[1] => out_jump[1].DATAIN
 in_port[2] => out_jump[2].DATAIN
@@ -294,7 +294,7 @@ out_jump[2] <= in_port[2].DB_MAX_OUTPUT_PORT_TYPE
 out_jump[3] <= in_port[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|unidade_controle:port_map_unidade_de_controle
+|Trinity|unidade_controle:port_map_unidade_de_controle
 clock => ~NO_FANOUT~
 opcode[0] => Mux2.IN19
 opcode[0] => Mux3.IN10
@@ -345,7 +345,7 @@ ALUSRC <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
 REGWRITE <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|bancoRegistradores:port_map_banco_de_registradores
+|Trinity|bancoRegistradores:port_map_banco_de_registradores
 clock => registradores~20.CLK
 clock => registradores~0.CLK
 clock => registradores~1.CLK
@@ -452,7 +452,7 @@ out_Reg2[14] <= registradores.PORTBDATAOUT14
 out_Reg2[15] <= registradores.PORTBDATAOUT15
 
 
-|Qualcom_LI|bitExtensor2_8:port_map_extensor_sinal_2_8
+|Trinity|bitExtensor4_16:port_map_extensor_sinal_4_16
 in_data[0] => s[0].DATAIN
 in_data[1] => s[1].DATAIN
 in_data[2] => s[2].DATAIN
@@ -475,7 +475,7 @@ s[14] <= <GND>
 s[15] <= <GND>
 
 
-|Qualcom_LI|multiplexador:port_map_mult1_2x1_br_ula
+|Trinity|multiplexador:port_map_mult1_2x1_br_ula
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT
@@ -542,7 +542,7 @@ Sout[14] <= Sout.DB_MAX_OUTPUT_PORT_TYPE
 Sout[15] <= Sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula
+|Trinity|ula:port_map_ula
 selec[0] => Mux6.IN15
 selec[0] => Mux7.IN15
 selec[0] => Mux8.IN15
@@ -827,12 +827,12 @@ s_zero <= s_zero$latch.DB_MAX_OUTPUT_PORT_TYPE
 overflow <= overflow$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|zero:port_map_temp_zero
+|Trinity|ula:port_map_ula|zero:port_map_temp_zero
 in_port => out_port.DATAIN
 out_port <= in_port.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma
+|Trinity|ula:port_map_ula|somador8bit:soma
 busX[0] => somador1bit:b0.X
 busX[1] => somador1bit:b1.X
 busX[2] => somador1bit:b2.X
@@ -841,14 +841,14 @@ busX[4] => somador1bit:b4.X
 busX[5] => somador1bit:b5.X
 busX[6] => somador1bit:b6.X
 busX[7] => somador1bit:b7.X
-busX[8] => ~NO_FANOUT~
-busX[9] => ~NO_FANOUT~
-busX[10] => ~NO_FANOUT~
-busX[11] => ~NO_FANOUT~
-busX[12] => ~NO_FANOUT~
-busX[13] => ~NO_FANOUT~
-busX[14] => ~NO_FANOUT~
-busX[15] => ~NO_FANOUT~
+busX[8] => somador1bit:b8.X
+busX[9] => somador1bit:b9.X
+busX[10] => somador1bit:b10.X
+busX[11] => somador1bit:b11.X
+busX[12] => somador1bit:b12.X
+busX[13] => somador1bit:b13.X
+busX[14] => somador1bit:b14.X
+busX[15] => somador1bit:b15.X
 busY[0] => somador1bit:b0.Y
 busY[1] => somador1bit:b1.Y
 busY[2] => somador1bit:b2.Y
@@ -857,15 +857,16 @@ busY[4] => somador1bit:b4.Y
 busY[5] => somador1bit:b5.Y
 busY[6] => somador1bit:b6.Y
 busY[7] => somador1bit:b7.Y
-busY[8] => ~NO_FANOUT~
-busY[9] => ~NO_FANOUT~
-busY[10] => ~NO_FANOUT~
-busY[11] => ~NO_FANOUT~
-busY[12] => ~NO_FANOUT~
-busY[13] => ~NO_FANOUT~
-busY[14] => ~NO_FANOUT~
-busY[15] => ~NO_FANOUT~
+busY[8] => somador1bit:b8.Y
+busY[9] => somador1bit:b9.Y
+busY[10] => somador1bit:b10.Y
+busY[11] => somador1bit:b11.Y
+busY[12] => somador1bit:b12.Y
+busY[13] => somador1bit:b13.Y
+busY[14] => somador1bit:b14.Y
+busY[15] => somador1bit:b15.Y
 Cin => somador1bit:b0.Cin
+Cin => somador1bit:b8.Cin
 busS[0] <= somador1bit:b0.S
 busS[1] <= somador1bit:b1.S
 busS[2] <= somador1bit:b2.S
@@ -874,18 +875,18 @@ busS[4] <= somador1bit:b4.S
 busS[5] <= somador1bit:b5.S
 busS[6] <= somador1bit:b6.S
 busS[7] <= somador1bit:b7.S
-busS[8] <= <GND>
-busS[9] <= <GND>
-busS[10] <= <GND>
-busS[11] <= <GND>
-busS[12] <= <GND>
-busS[13] <= <GND>
-busS[14] <= <GND>
-busS[15] <= <GND>
+busS[8] <= somador1bit:b8.S
+busS[9] <= somador1bit:b9.S
+busS[10] <= somador1bit:b10.S
+busS[11] <= somador1bit:b11.S
+busS[12] <= somador1bit:b12.S
+busS[13] <= somador1bit:b13.S
+busS[14] <= somador1bit:b14.S
+busS[15] <= somador1bit:b15.S
 overflow <= overflow.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b0
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b0
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -899,7 +900,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b1
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b1
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -913,7 +914,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b2
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b2
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -927,7 +928,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b3
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b3
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -941,7 +942,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b4
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b4
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -955,7 +956,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b5
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b5
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -969,7 +970,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b6
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b6
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -983,7 +984,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b7
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b7
 X => S.IN0
 X => Cout.IN0
 X => Cout.IN0
@@ -997,7 +998,119 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|ram_memory:port_map_ram
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b8
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b9
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b10
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b11
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b12
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b13
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b14
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b15
+X => S.IN0
+X => Cout.IN0
+X => Cout.IN0
+Y => S.IN1
+Y => Cout.IN1
+Y => Cout.IN0
+Cin => S.IN1
+Cin => Cout.IN1
+Cin => Cout.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Trinity|ram_memory:port_map_ram
 clock => mem~19.CLK
 clock => mem~0.CLK
 clock => mem~1.CLK
@@ -1125,7 +1238,7 @@ Sout[14] <= Sout[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 Sout[15] <= Sout[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|multiplexador:port_map_mult4_2x1_ram_ula
+|Trinity|multiplexador:port_map_mult4_2x1_ram_ula
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT
@@ -1192,7 +1305,7 @@ Sout[14] <= Sout.DB_MAX_OUTPUT_PORT_TYPE
 Sout[15] <= Sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|bitExtensor4_8:port_map_extensor_sinal_4_8
+|Trinity|bitExtensor4_16_2:port_map_extensor_sinal_4_16_2
 in_data[0] => s[0].DATAIN
 in_data[1] => s[1].DATAIN
 in_data[2] => s[2].DATAIN
@@ -1215,13 +1328,13 @@ s[14] <= <GND>
 s[15] <= <GND>
 
 
-|Qualcom_LI|and_gate:port_map_porta_and
+|Trinity|and_gate:port_map_porta_and
 inand1 => saida.IN0
 inand2 => saida.IN1
 saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|multiplexador:port_map_mult2_2x1_add_es
+|Trinity|multiplexador:port_map_mult2_2x1_add_es
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT
@@ -1288,7 +1401,7 @@ Sout[14] <= Sout.DB_MAX_OUTPUT_PORT_TYPE
 Sout[15] <= Sout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Qualcom_LI|multiplexador:port_map_mult3_2X1_jump
+|Trinity|multiplexador:port_map_mult3_2X1_jump
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT
 SEL => Sout.OUTPUTSELECT

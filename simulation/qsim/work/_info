@@ -1,0 +1,194 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/IntelFPGA_lite/18.1/1trabalho_aoc/simulation/qsim
+Equalcom_li
+Z1 w1700958038
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z10 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z11 8processor_16bits.vho
+Z12 Fprocessor_16bits.vho
+l0
+L38
+VSCoDLjX@gk[f>]Dgl>gEM3
+!s100 n@Y;giJ`>>B?M3k^>8;R<2
+Z13 OV;C;10.5b;63
+32
+Z14 !s110 1700958040
+!i10b 1
+Z15 !s108 1700958040.000000
+Z16 !s90 -work|work|processor_16bits.vho|
+Z17 !s107 processor_16bits.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 10 qualcom_li 0 22 SCoDLjX@gk[f>]Dgl>gEM3
+l382
+L189
+VlE@LfmfPQa`ZB;d:U=KMf0
+!s100 kJFno3]j0]ce7`5L2VI5[1
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Equalcom_li_vhd_vec_tst
+Z20 w1700958037
+R8
+R9
+R0
+Z21 8Waveform1.vwf.vht
+Z22 FWaveform1.vwf.vht
+l0
+L31
+V0CBoBjeMl]X?IQTD7Y5zM2
+!s100 jgXPimGgURC@M3KkCPOLj2
+R13
+32
+R14
+!i10b 1
+R15
+Z23 !s90 -work|work|Waveform1.vwf.vht|
+Z24 !s107 Waveform1.vwf.vht|
+!i113 1
+R18
+R19
+Aqualcom_li_arch
+R8
+R9
+DEx4 work 22 qualcom_li_vhd_vec_tst 0 22 0CBoBjeMl]X?IQTD7Y5zM2
+l66
+L33
+VSQQOAKCLa3RJh^Oc<FQI@1
+!s100 Z?7HQD9a]WV[L:_BKgknf3
+R13
+32
+R14
+!i10b 1
+R15
+R23
+R24
+!i113 1
+R18
+R19
+Etrinity
+Z25 w1701202267
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+R0
+R11
+R12
+l0
+L38
+VUP33SSYCJ9P`h0FQM@JYX2
+!s100 kn=>oW?doKO^1ciIFZlkZ1
+R13
+32
+Z26 !s110 1701202270
+!i10b 1
+Z27 !s108 1701202269.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 7 trinity 0 22 UP33SSYCJ9P`h0FQM@JYX2
+l538
+L189
+VZkT>6OWeE=DAYJJ0T:RR>1
+!s100 hj0JO1<UL]kVeBdE85=BU0
+R13
+32
+R26
+!i10b 1
+R27
+R16
+R17
+!i113 1
+R18
+R19
+Etrinity_vhd_vec_tst
+Z28 w1701202264
+R8
+R9
+R0
+Z29 8Waveform2.vwf.vht
+Z30 FWaveform2.vwf.vht
+l0
+L31
+V4d`6klmKicY807ZmG@HWZ3
+!s100 m:CFA_S3l0;6_V;o7i9_W2
+R13
+32
+R26
+!i10b 1
+Z31 !s108 1701202270.000000
+Z32 !s90 -work|work|Waveform2.vwf.vht|
+Z33 !s107 Waveform2.vwf.vht|
+!i113 1
+R18
+R19
+Atrinity_arch
+R8
+R9
+DEx4 work 19 trinity_vhd_vec_tst 0 22 4d`6klmKicY807ZmG@HWZ3
+l66
+L33
+Vc>aTzI34bTXQ=B4lS4N:P0
+!s100 ^VNIIE;NXGH_^J`9^nT8a1
+R13
+32
+R26
+!i10b 1
+R31
+R32
+R33
+!i113 1
+R18
+R19

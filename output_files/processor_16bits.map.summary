@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Nov 24 00:12:42 2023
+Analysis & Synthesis Status : Successful - Sun Nov 26 13:49:04 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : processor_16bits
-Top-level Entity Name : Qualcom_LI
+Top-level Entity Name : Trinity
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 32
 Total pins : 130
 Total virtual pins : 0
-Total block memory bits : 32
+Total block memory bits : 128
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

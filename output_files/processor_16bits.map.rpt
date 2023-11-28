@@ -1,5 +1,5 @@
 Analysis & Synthesis report for processor_16bits
-Fri Nov 24 00:12:42 2023
+Sun Nov 26 13:49:04 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -19,13 +19,21 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  11. General Register Statistics
  12. Registers Packed Into Inferred Megafunctions
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_22v1:auto_generated
+ 14. Source assignments for ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_umv1:auto_generated
  15. Parameter Settings for Inferred Entity Instance: ram_memory:port_map_ram|altsyncram:mem_rtl_0
  16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma"
- 18. Post-Synthesis Netlist Statistics for Top Partition
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
+ 17. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b15"
+ 18. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b13"
+ 19. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b12"
+ 20. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b11"
+ 21. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b10"
+ 22. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b9"
+ 23. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b8"
+ 24. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b7"
+ 25. Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma"
+ 26. Post-Synthesis Netlist Statistics for Top Partition
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -51,16 +59,16 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 24 00:12:42 2023       ;
+; Analysis & Synthesis Status     ; Successful - Sun Nov 26 13:49:04 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; processor_16bits                            ;
-; Top-level Entity Name           ; Qualcom_LI                                  ;
+; Top-level Entity Name           ; Trinity                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 32                                          ;
 ; Total pins                      ; 130                                         ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 32                                          ;
+; Total block memory bits         ; 128                                         ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -77,7 +85,7 @@ refer to the applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; Qualcom_LI         ; processor_16bits   ;
+; Top-level entity name                                                           ; Trinity            ; processor_16bits   ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -180,9 +188,10 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                     ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                              ; Library ;
 +------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------+---------+
-; add1.vhd                                             ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/add1.vhd                                             ;         ;
+; somador.vhd                                          ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador.vhd                                          ;         ;
+; bitExtensor4_16_2.vhd                                ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_16_2.vhd                                ;         ;
+; bitExtensor4_16.vhd                                  ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_16.vhd                                  ;         ;
 ; bancoRegistradores.vhd                               ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd                               ;         ;
-; bitExtensor2_8.vhd                                   ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor2_8.vhd                                   ;         ;
 ; divisao_instrucao.vhd                                ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/divisao_instrucao.vhd                                ;         ;
 ; multiplexador.vhd                                    ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/multiplexador.vhd                                    ;         ;
 ; PC.vhd                                               ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/PC.vhd                                               ;         ;
@@ -193,9 +202,8 @@ refer to the applicable agreement for further details.
 ; ula.vhd                                              ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd                                              ;         ;
 ; zero.vhd                                             ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/zero.vhd                                             ;         ;
 ; unidade_controle.vhd                                 ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/unidade_controle.vhd                                 ;         ;
-; Qualcom_LI.vhd                                       ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd                                       ;         ;
-; bitExtensor4_8.vhd                                   ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_8.vhd                                   ;         ;
 ; and_gate.vhd                                         ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/and_gate.vhd                                         ;         ;
+; Trinity.vhd                                          ; yes             ; User VHDL File                                        ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd                                          ;         ;
 ; altsyncram.tdf                                       ; yes             ; Megafunction                                          ; e:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                     ;         ;
 ; stratix_ram_block.inc                                ; yes             ; Megafunction                                          ; e:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc              ;         ;
 ; lpm_mux.inc                                          ; yes             ; Megafunction                                          ; e:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                        ;         ;
@@ -205,7 +213,7 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                           ; yes             ; Megafunction                                          ; e:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                         ;         ;
 ; altram.inc                                           ; yes             ; Megafunction                                          ; e:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                         ;         ;
 ; altdpram.inc                                         ; yes             ; Megafunction                                          ; e:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                       ;         ;
-; db/altsyncram_22v1.tdf                               ; yes             ; Auto-Generated Megafunction                           ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/db/altsyncram_22v1.tdf                               ;         ;
+; db/altsyncram_umv1.tdf                               ; yes             ; Auto-Generated Megafunction                           ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/db/altsyncram_umv1.tdf                               ;         ;
 ; db/processor_16bits.ram0_ram_memory_1f6389dd.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; E:/IntelFPGA_lite/18.1/1trabalho_aoc/db/processor_16bits.ram0_ram_memory_1f6389dd.hdl.mif ;         ;
 +------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------+---------+
 
@@ -215,51 +223,60 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 57          ;
+; Estimate of Logic utilization (ALMs needed) ; 91          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 102         ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 11          ;
-;     -- 5 input functions                    ; 24          ;
-;     -- 4 input functions                    ; 22          ;
-;     -- <=3 input functions                  ; 45          ;
+; Combinational ALUT usage for logic          ; 141         ;
+;     -- 7 input functions                    ; 2           ;
+;     -- 6 input functions                    ; 39          ;
+;     -- 5 input functions                    ; 12          ;
+;     -- 4 input functions                    ; 44          ;
+;     -- <=3 input functions                  ; 44          ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 32          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 130         ;
 ; Total MLAB memory bits                      ; 0           ;
-; Total block memory bits                     ; 32          ;
+; Total block memory bits                     ; 128         ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 48          ;
-; Total fan-out                               ; 746         ;
-; Average fan-out                             ; 1.82        ;
+; Total fan-out                               ; 1051        ;
+; Average fan-out                             ; 2.34        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                            ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+--------------------+--------------+
-; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name        ; Library Name ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+--------------------+--------------+
-; |Qualcom_LI                                             ; 102 (1)             ; 32 (0)                    ; 32                ; 0          ; 130  ; 0            ; |Qualcom_LI                                                                             ; Qualcom_LI         ; work         ;
-;    |PC:port_map_pc|                                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|PC:port_map_pc                                                              ; PC                 ; work         ;
-;    |add1:port_map_addr|                                 ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|add1:port_map_addr                                                          ; add1               ; work         ;
-;    |bancoRegistradores:port_map_banco_de_registradores| ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|bancoRegistradores:port_map_banco_de_registradores                          ; bancoRegistradores ; work         ;
-;    |multiplexador:port_map_mult1_2x1_br_ula|            ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|multiplexador:port_map_mult1_2x1_br_ula                                     ; multiplexador      ; work         ;
-;    |ram_memory:port_map_ram|                            ; 0 (0)               ; 0 (0)                     ; 32                ; 0          ; 0    ; 0            ; |Qualcom_LI|ram_memory:port_map_ram                                                     ; ram_memory         ; work         ;
-;       |altsyncram:mem_rtl_0|                            ; 0 (0)               ; 0 (0)                     ; 32                ; 0          ; 0    ; 0            ; |Qualcom_LI|ram_memory:port_map_ram|altsyncram:mem_rtl_0                                ; altsyncram         ; work         ;
-;          |altsyncram_22v1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 32                ; 0          ; 0    ; 0            ; |Qualcom_LI|ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_22v1:auto_generated ; altsyncram_22v1    ; work         ;
-;    |rom_memory:port_map_rom|                            ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|rom_memory:port_map_rom                                                     ; rom_memory         ; work         ;
-;    |ula:port_map_ula|                                   ; 61 (56)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|ula:port_map_ula                                                            ; ula                ; work         ;
-;       |somador8bit:soma|                                ; 5 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|ula:port_map_ula|somador8bit:soma                                           ; somador8bit        ; work         ;
-;          |somador1bit:b3|                               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b3                            ; somador1bit        ; work         ;
-;          |somador1bit:b4|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b4                            ; somador1bit        ; work         ;
-;          |somador1bit:b7|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|ula:port_map_ula|somador8bit:soma|somador1bit:b7                            ; somador1bit        ; work         ;
-;    |unidade_controle:port_map_unidade_de_controle|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Qualcom_LI|unidade_controle:port_map_unidade_de_controle                               ; unidade_controle   ; work         ;
-+---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+--------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                  ; Entity Name        ; Library Name ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+--------------------+--------------+
+; |Trinity                                                ; 141 (1)             ; 32 (0)                    ; 128               ; 0          ; 130  ; 0            ; |Trinity                                                                             ; Trinity            ; work         ;
+;    |PC:port_map_pc|                                     ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Trinity|PC:port_map_pc                                                              ; PC                 ; work         ;
+;    |bancoRegistradores:port_map_banco_de_registradores| ; 18 (18)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |Trinity|bancoRegistradores:port_map_banco_de_registradores                          ; bancoRegistradores ; work         ;
+;    |multiplexador:port_map_mult1_2x1_br_ula|            ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|multiplexador:port_map_mult1_2x1_br_ula                                     ; multiplexador      ; work         ;
+;    |multiplexador:port_map_mult3_2X1_jump|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|multiplexador:port_map_mult3_2X1_jump                                       ; multiplexador      ; work         ;
+;    |multiplexador:port_map_mult4_2x1_ram_ula|           ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|multiplexador:port_map_mult4_2x1_ram_ula                                    ; multiplexador      ; work         ;
+;    |ram_memory:port_map_ram|                            ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Trinity|ram_memory:port_map_ram                                                     ; ram_memory         ; work         ;
+;       |altsyncram:mem_rtl_0|                            ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Trinity|ram_memory:port_map_ram|altsyncram:mem_rtl_0                                ; altsyncram         ; work         ;
+;          |altsyncram_umv1:auto_generated|               ; 0 (0)               ; 0 (0)                     ; 128               ; 0          ; 0    ; 0            ; |Trinity|ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_umv1:auto_generated ; altsyncram_umv1    ; work         ;
+;    |rom_memory:port_map_rom|                            ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|rom_memory:port_map_rom                                                     ; rom_memory         ; work         ;
+;    |somador:port_map_addr|                              ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|somador:port_map_addr                                                       ; somador            ; work         ;
+;    |ula:port_map_ula|                                   ; 64 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula                                                            ; ula                ; work         ;
+;       |somador8bit:soma|                                ; 15 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma                                           ; somador8bit        ; work         ;
+;          |somador1bit:b13|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b13                           ; somador1bit        ; work         ;
+;          |somador1bit:b14|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b14                           ; somador1bit        ; work         ;
+;          |somador1bit:b15|                              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b15                           ; somador1bit        ; work         ;
+;          |somador1bit:b1|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b1                            ; somador1bit        ; work         ;
+;          |somador1bit:b2|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b2                            ; somador1bit        ; work         ;
+;          |somador1bit:b3|                               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b3                            ; somador1bit        ; work         ;
+;          |somador1bit:b4|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b4                            ; somador1bit        ; work         ;
+;          |somador1bit:b5|                               ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b5                            ; somador1bit        ; work         ;
+;          |somador1bit:b6|                               ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b6                            ; somador1bit        ; work         ;
+;          |somador1bit:b7|                               ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|ula:port_map_ula|somador8bit:soma|somador1bit:b7                            ; somador1bit        ; work         ;
+;    |unidade_controle:port_map_unidade_de_controle|      ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Trinity|unidade_controle:port_map_unidade_de_controle                               ; unidade_controle   ; work         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -268,7 +285,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------------------+
 ; Name                                                                                   ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                  ;
 +----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------------------+
-; ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_22v1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; db/processor_16bits.ram0_ram_memory_1f6389dd.hdl.mif ;
+; ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_umv1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 16           ; 8            ; 16           ; 128  ; db/processor_16bits.ram0_ram_memory_1f6389dd.hdl.mif ;
 +----------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------------------+
 
 
@@ -283,253 +300,253 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+----------------------------------------------------------------------+--------------------+
-; Register name                                                        ; Reason for Removal ;
-+----------------------------------------------------------------------+--------------------+
-; bancoRegistradores:port_map_banco_de_registradores|registradores~37  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~38  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~39  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~40  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~41  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~42  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~43  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~44  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~45  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~46  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~47  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~48  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~49  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~50  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~51  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~52  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~53  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~54  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~55  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~56  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~57  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~58  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~59  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~60  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~61  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~62  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~63  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~64  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~65  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~66  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~67  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~68  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~69  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~70  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~71  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~72  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~73  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~74  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~75  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~76  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~77  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~78  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~79  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~80  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~81  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~82  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~83  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~84  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~85  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~86  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~87  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~88  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~89  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~90  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~91  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~92  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~93  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~94  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~95  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~96  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~97  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~98  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~99  ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~100 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~101 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~102 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~103 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~104 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~105 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~106 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~107 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~108 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~109 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~110 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~111 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~112 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~113 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~114 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~115 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~116 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~117 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~118 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~119 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~120 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~121 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~122 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~123 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~124 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~125 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~126 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~127 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~128 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~129 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~130 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~131 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~132 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~133 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~134 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~135 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~136 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~137 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~138 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~139 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~140 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~141 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~142 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~143 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~144 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~145 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~146 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~147 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~148 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~149 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~150 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~151 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~152 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~153 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~154 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~155 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~156 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~157 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~158 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~159 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~160 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~161 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~162 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~163 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~164 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~165 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~166 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~167 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~168 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~169 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~170 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~171 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~172 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~173 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~174 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~175 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~176 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~177 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~178 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~179 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~180 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~181 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~182 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~183 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~184 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~185 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~186 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~187 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~188 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~189 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~190 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~191 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~192 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~193 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~194 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~195 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~196 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~197 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~198 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~199 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~200 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~201 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~202 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~203 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~204 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~205 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~206 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~207 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~208 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~209 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~210 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~211 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~212 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~213 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~214 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~215 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~216 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~217 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~218 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~219 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~220 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~221 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~222 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~223 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~224 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~225 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~226 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~227 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~228 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~229 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~230 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~231 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~232 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~233 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~234 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~235 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~236 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~237 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~238 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~239 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~240 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~241 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~242 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~243 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~244 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~245 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~246 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~247 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~248 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~249 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~250 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~251 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~252 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~253 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~254 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~255 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~256 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~257 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~258 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~259 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~260 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~261 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~262 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~263 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~264 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~265 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~266 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~267 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~268 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~269 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~270 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~271 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~272 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~273 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~274 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~275 ; Lost fanout        ;
-; bancoRegistradores:port_map_banco_de_registradores|registradores~276 ; Lost fanout        ;
-; Total Number of Removed Registers = 240                              ;                    ;
-+----------------------------------------------------------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                            ;
++----------------------------------------------------------------------+----------------------------------------+
+; Register name                                                        ; Reason for Removal                     ;
++----------------------------------------------------------------------+----------------------------------------+
+; bancoRegistradores:port_map_banco_de_registradores|registradores~53  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~54  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~55  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~56  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~57  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~58  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~59  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~60  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~61  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~62  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~63  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~64  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~65  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~66  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~67  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~68  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~69  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~70  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~71  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~72  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~73  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~74  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~75  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~76  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~77  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~78  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~79  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~80  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~81  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~82  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~83  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~84  ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~117 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~118 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~119 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~120 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~121 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~122 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~123 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~124 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~125 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~126 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~127 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~128 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~129 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~130 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~131 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~132 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~133 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~134 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~135 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~136 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~137 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~138 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~139 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~140 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~141 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~142 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~143 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~144 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~145 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~146 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~147 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~148 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~149 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~150 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~151 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~152 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~153 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~154 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~155 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~156 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~157 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~158 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~159 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~160 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~161 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~162 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~163 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~164 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~165 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~166 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~167 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~168 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~169 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~170 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~171 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~172 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~173 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~174 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~175 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~176 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~177 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~178 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~179 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~180 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~181 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~182 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~183 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~184 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~185 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~186 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~187 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~188 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~189 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~190 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~191 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~192 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~193 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~194 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~195 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~196 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~197 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~198 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~199 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~200 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~201 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~202 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~203 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~204 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~205 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~206 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~207 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~208 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~209 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~210 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~211 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~212 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~213 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~214 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~215 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~216 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~217 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~218 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~219 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~220 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~221 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~222 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~223 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~224 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~225 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~226 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~227 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~228 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~229 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~230 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~231 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~232 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~233 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~234 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~235 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~236 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~237 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~238 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~239 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~240 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~241 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~242 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~243 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~244 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~245 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~246 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~247 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~248 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~249 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~250 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~251 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~252 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~253 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~254 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~255 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~256 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~257 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~258 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~259 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~260 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~261 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~262 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~263 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~264 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~265 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~266 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~267 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~268 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~269 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~270 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~271 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~272 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~273 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~274 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~275 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~276 ; Lost fanout                            ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~52  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~100 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~116 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~51  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~99  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~115 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~50  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~98  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~114 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~49  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~97  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~113 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~48  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~96  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~112 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~47  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~95  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~111 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~46  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~94  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~110 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~45  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~93  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~109 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~44  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~92  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~108 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~43  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~91  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~107 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~42  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~90  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~106 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~41  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~89  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~105 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~40  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~88  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~104 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~39  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~87  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~103 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~38  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~86  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~102 ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~37  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~85  ; Stuck at GND due to stuck port data_in ;
+; bancoRegistradores:port_map_banco_de_registradores|registradores~101 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 240                              ;                                        ;
++----------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -538,11 +555,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 32    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Clear  ; 14    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -556,18 +573,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-------------------------------------+-----------------------------------+------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |Qualcom_LI|ula:port_map_ula|Mux7  ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |Qualcom_LI|ula:port_map_ula|Mux20 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 8:1                ; 15 bits   ; 75 LEs        ; 30 LEs               ; 45 LEs                 ; No         ; |Trinity|ula:port_map_ula|Mux20 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
-; Source assignments for ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_22v1:auto_generated ;
+; Source assignments for ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_umv1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                   ;
 +---------------------------------+--------------------+------+--------------------------------------+
@@ -631,7 +647,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                                    ; Untyped        ;
 ; DEVICE_FAMILY                      ; Cyclone V                                            ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_22v1                                      ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_umv1                                      ; Untyped        ;
 +------------------------------------+------------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -656,6 +672,78 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b15"                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b13"                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b12"                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b11"                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b10"                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b9"                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b8"                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma|somador1bit:b7"                                   ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +---------------------------------------------------------------+
 ; Port Connectivity Checks: "ula:port_map_ula|somador8bit:soma" ;
 +------+-------+----------+-------------------------------------+
@@ -671,25 +759,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 32                          ;
-;     plain             ; 32                          ;
-; arriav_lcell_comb     ; 102                         ;
-;     arith             ; 49                          ;
-;         0 data inputs ; 1                           ;
+;     ENA               ; 16                          ;
+;     SCLR              ; 14                          ;
+;     plain             ; 2                           ;
+; arriav_lcell_comb     ; 141                         ;
+;     arith             ; 32                          ;
 ;         1 data inputs ; 16                          ;
-;         2 data inputs ; 15                          ;
-;         4 data inputs ; 17                          ;
-;     normal            ; 53                          ;
+;         4 data inputs ; 14                          ;
+;         5 data inputs ; 2                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 107                         ;
 ;         0 data inputs ; 1                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 5                           ;
-;         5 data inputs ; 24                          ;
-;         6 data inputs ; 11                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 30                          ;
+;         5 data inputs ; 10                          ;
+;         6 data inputs ; 39                          ;
 ; boundary_port         ; 130                         ;
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 6.50                        ;
-; Average LUT depth     ; 4.26                        ;
+; Average LUT depth     ; 4.14                        ;
 +-----------------------+-----------------------------+
 
 
@@ -698,7 +789,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -708,19 +799,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 24 00:12:31 2023
+    Info: Processing started: Sun Nov 26 13:48:55 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor_16bits -c processor_16bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file add1.vhd
-    Info (12022): Found design unit 1: add1-main File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/add1.vhd Line: 12
-    Info (12023): Found entity 1: add1 File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/add1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
+    Info (12022): Found design unit 1: somador-main File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador.vhd Line: 12
+    Info (12023): Found entity 1: somador File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bitextensor4_16_2.vhd
+    Info (12022): Found design unit 1: bitExtensor4_16_2-Behavior File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_16_2.vhd Line: 12
+    Info (12023): Found entity 1: bitExtensor4_16_2 File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_16_2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bitextensor4_16.vhd
+    Info (12022): Found design unit 1: bitExtensor4_16-Behavior File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_16.vhd Line: 12
+    Info (12023): Found entity 1: bitExtensor4_16 File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_16.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
     Info (12022): Found design unit 1: bancoRegistradores-main File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd Line: 17
     Info (12023): Found entity 1: bancoRegistradores File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file bitextensor2_8.vhd
-    Info (12022): Found design unit 1: bitExtensor2_8-Behavior File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor2_8.vhd Line: 12
-    Info (12023): Found entity 1: bitExtensor2_8 File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor2_8.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file divisao_instrucao.vhd
     Info (12022): Found design unit 1: divisao_instrucao-behavior File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/divisao_instrucao.vhd Line: 14
     Info (12023): Found entity 1: divisao_instrucao File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/divisao_instrucao.vhd Line: 4
@@ -754,32 +848,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file zero.vh
 Info (12021): Found 2 design units, including 1 entities, in source file unidade_controle.vhd
     Info (12022): Found design unit 1: unidade_controle-Behavioral File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/unidade_controle.vhd Line: 20
     Info (12023): Found entity 1: unidade_controle File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/unidade_controle.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file qualcom_li.vhd
-    Info (12022): Found design unit 1: Qualcom_LI-Behavioral File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 29
-    Info (12023): Found entity 1: Qualcom_LI File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file bitextensor4_8.vhd
-    Info (12022): Found design unit 1: bitExtensor4_8-Behavior File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_8.vhd Line: 12
-    Info (12023): Found entity 1: bitExtensor4_8 File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bitExtensor4_8.vhd Line: 4
+Warning (12019): Can't analyze file -- file Qualcom_LI.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file and_gate.vhd
     Info (12022): Found design unit 1: and_gate-Behavioral File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/and_gate.vhd Line: 10
     Info (12023): Found entity 1: and_gate File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/and_gate.vhd Line: 4
-Info (12127): Elaborating entity "Qualcom_LI" for the top level hierarchy
-Info (12128): Elaborating entity "add1" for hierarchy "add1:port_map_addr" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 206
-Warning (10492): VHDL Process Statement warning at add1.vhd(16): signal "inPort" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/add1.vhd Line: 16
-Info (12128): Elaborating entity "PC" for hierarchy "PC:port_map_pc" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 207
-Info (12128): Elaborating entity "rom_memory" for hierarchy "rom_memory:port_map_rom" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 208
-Warning (10492): VHDL Process Statement warning at rom_memory.vhd(65): signal "rom_memory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/rom_memory.vhd Line: 65
-Warning (10492): VHDL Process Statement warning at rom_memory.vhd(65): signal "in_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/rom_memory.vhd Line: 65
-Info (12128): Elaborating entity "divisao_instrucao" for hierarchy "divisao_instrucao:port_map_divisao_intrucao" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 209
-Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:port_map_unidade_de_controle" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 210
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:port_map_banco_de_registradores" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 211
+Info (12021): Found 2 design units, including 1 entities, in source file trinity.vhd
+    Info (12022): Found design unit 1: Trinity-Behavioral File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 29
+    Info (12023): Found entity 1: Trinity File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 4
+Info (12127): Elaborating entity "Trinity" for the top level hierarchy
+Info (12128): Elaborating entity "somador" for hierarchy "somador:port_map_addr" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 206
+Warning (10492): VHDL Process Statement warning at somador.vhd(16): signal "inPort" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador.vhd Line: 16
+Info (12128): Elaborating entity "PC" for hierarchy "PC:port_map_pc" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 207
+Info (12128): Elaborating entity "rom_memory" for hierarchy "rom_memory:port_map_rom" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 208
+Warning (10492): VHDL Process Statement warning at rom_memory.vhd(71): signal "rom_memory" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/rom_memory.vhd Line: 71
+Warning (10492): VHDL Process Statement warning at rom_memory.vhd(71): signal "in_data" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/rom_memory.vhd Line: 71
+Info (12128): Elaborating entity "divisao_instrucao" for hierarchy "divisao_instrucao:port_map_divisao_intrucao" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 209
+Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:port_map_unidade_de_controle" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 210
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "bancoRegistradores:port_map_banco_de_registradores" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 211
 Warning (10492): VHDL Process Statement warning at bancoRegistradores.vhd(30): signal "registradores" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd Line: 30
 Warning (10492): VHDL Process Statement warning at bancoRegistradores.vhd(30): signal "addressReg1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd Line: 30
 Warning (10492): VHDL Process Statement warning at bancoRegistradores.vhd(31): signal "registradores" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd Line: 31
 Warning (10492): VHDL Process Statement warning at bancoRegistradores.vhd(31): signal "addressReg2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd Line: 31
-Info (12128): Elaborating entity "bitExtensor2_8" for hierarchy "bitExtensor2_8:port_map_extensor_sinal_2_8" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 212
-Info (12128): Elaborating entity "multiplexador" for hierarchy "multiplexador:port_map_mult1_2x1_br_ula" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 213
-Info (12128): Elaborating entity "ula" for hierarchy "ula:port_map_ula" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 214
+Info (12128): Elaborating entity "bitExtensor4_16" for hierarchy "bitExtensor4_16:port_map_extensor_sinal_4_16" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 212
+Info (12128): Elaborating entity "multiplexador" for hierarchy "multiplexador:port_map_mult1_2x1_br_ula" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 213
+Info (12128): Elaborating entity "ula" for hierarchy "ula:port_map_ula" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 214
 Warning (10492): VHDL Process Statement warning at ula.vhd(50): signal "somadorOut" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 50
 Warning (10492): VHDL Process Statement warning at ula.vhd(51): signal "overflowSoma" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 51
 Warning (10631): VHDL Process Statement warning at ula.vhd(46): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 46
@@ -790,14 +882,20 @@ Info (10041): Inferred latch for "s_zero" at ula.vhd(46) File: E:/IntelFPGA_lite
 Info (10041): Inferred latch for "overflow" at ula.vhd(46) File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 46
 Info (12128): Elaborating entity "zero" for hierarchy "ula:port_map_ula|zero:port_map_temp_zero" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 43
 Info (12128): Elaborating entity "somador8bit" for hierarchy "ula:port_map_ula|somador8bit:soma" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 44
-Warning (10873): Using initial value X (don't care) for net "busS[15..8]" at somador8bit.vhd(10) File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 10
-Info (12128): Elaborating entity "somador1bit" for hierarchy "ula:port_map_ula|somador8bit:soma|somador1bit:b0" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 33
-Info (12128): Elaborating entity "ram_memory" for hierarchy "ram_memory:port_map_ram" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 215
-Info (12128): Elaborating entity "bitExtensor4_8" for hierarchy "bitExtensor4_8:port_map_extensor_sinal_4_8" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 217
-Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:port_map_porta_and" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 218
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(30): object "C7" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(31): object "C8" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 31
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(32): object "C9" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 32
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(33): object "C10" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 33
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(34): object "C11" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(35): object "C12" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 35
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(36): object "C13" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 36
+Warning (10036): Verilog HDL or VHDL warning at somador8bit.vhd(38): object "C15" assigned a value but never read File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 38
+Info (12128): Elaborating entity "somador1bit" for hierarchy "ula:port_map_ula|somador8bit:soma|somador1bit:b0" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/somador8bit.vhd Line: 41
+Info (12128): Elaborating entity "ram_memory" for hierarchy "ram_memory:port_map_ram" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 215
+Info (12128): Elaborating entity "bitExtensor4_16_2" for hierarchy "bitExtensor4_16_2:port_map_extensor_sinal_4_16_2" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 217
+Info (12128): Elaborating entity "and_gate" for hierarchy "and_gate:port_map_porta_and" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 218
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "bancoRegistradores:port_map_banco_de_registradores|registradores" is uninferred due to asynchronous read logic File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/bancoRegistradores.vhd Line: 20
-Warning (14025): LATCH primitive "ula:port_map_ula|in_temp_zero" is permanently disabled File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 36
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "ram_memory:port_map_ram|mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -836,47 +934,42 @@ Info (12133): Instantiated megafunction "ram_memory:port_map_ram|altsyncram:mem_
     Info (12134): Parameter "INIT_FILE" = "db/processor_16bits.ram0_ram_memory_1f6389dd.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
     Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_22v1.tdf
-    Info (12023): Found entity 1: altsyncram_22v1 File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/db/altsyncram_22v1.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_umv1.tdf
+    Info (12023): Found entity 1: altsyncram_umv1 File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/db/altsyncram_umv1.tdf Line: 27
 Warning (13012): Latch ula:port_map_ula|overflow has unsafe behavior File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/ula.vhd Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal PC:port_map_pc|outPort[0] File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/PC.vhd Line: 16
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "outRom[2]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[4]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[5]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[6]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[7]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[8]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[9]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[10]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[11]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "outRom[15]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 13
-    Warning (13410): Pin "out_opcode[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 20
-    Warning (13410): Pin "out_rs[0]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 21
-    Warning (13410): Pin "out_rs[1]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 21
-    Warning (13410): Pin "out_rs[2]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 21
-    Warning (13410): Pin "out_rs[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 21
-    Warning (13410): Pin "out_rt[0]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 22
-    Warning (13410): Pin "out_rt[1]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 22
-    Warning (13410): Pin "out_rt[2]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 22
-    Warning (13410): Pin "out_rt[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 22
-    Warning (13410): Pin "out_endereco[2]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 23
-    Warning (13410): Pin "out_endereco[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Qualcom_LI.vhd Line: 23
+    Warning (13410): Pin "outRom[1]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[5]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[7]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[8]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[9]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[10]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[11]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "outRom[13]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 13
+    Warning (13410): Pin "out_opcode[1]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 20
+    Warning (13410): Pin "out_rs[0]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 21
+    Warning (13410): Pin "out_rs[1]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 21
+    Warning (13410): Pin "out_rs[2]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 21
+    Warning (13410): Pin "out_rs[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 21
+    Warning (13410): Pin "out_rt[1]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 22
+    Warning (13410): Pin "out_rt[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 22
+    Warning (13410): Pin "out_endereco[1]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 23
+    Warning (13410): Pin "out_endereco[3]" is stuck at GND File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/Trinity.vhd Line: 23
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 240 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "ram_memory:port_map_ram|altsyncram:mem_rtl_0|altsyncram_22v1:auto_generated|ALTSYNCRAM" File: E:/IntelFPGA_lite/18.1/1trabalho_aoc/db/altsyncram_22v1.tdf Line: 37
+Info (17049): 192 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 264 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 303 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 129 output pins
-    Info (21061): Implemented 118 logic cells
+    Info (21061): Implemented 157 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
-    Info: Peak virtual memory: 4873 megabytes
-    Info: Processing ended: Fri Nov 24 00:12:42 2023
-    Info: Elapsed time: 00:00:11
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 4867 megabytes
+    Info: Processing ended: Sun Nov 26 13:49:04 2023
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:17
 
 
