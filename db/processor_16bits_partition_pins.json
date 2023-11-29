@@ -140,6 +140,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "outRom[2]",
+					"strict" : false
+				},
+				{
 					"name" : "outRom[4]",
 					"strict" : false
 				},
@@ -153,6 +157,14 @@
 				},
 				{
 					"name" : "outRom[13]",
+					"strict" : false
+				},
+				{
+					"name" : "outRom[14]",
+					"strict" : false
+				},
+				{
+					"name" : "outRom[15]",
 					"strict" : false
 				},
 				{
@@ -360,6 +372,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "out_opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_opcode[3]",
+					"strict" : false
+				},
+				{
 					"name" : "out_rs[0]",
 					"strict" : false
 				},
@@ -376,6 +396,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "out_rd[2]",
+					"strict" : false
+				},
+				{
 					"name" : "out_endereco[0]",
 					"strict" : false
 				},
@@ -384,11 +408,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "out_endereco[4]",
-					"strict" : false
-				},
-				{
-					"name" : "out_endereco[8]",
+					"name" : "out_endereco[2]",
 					"strict" : false
 				},
 				{

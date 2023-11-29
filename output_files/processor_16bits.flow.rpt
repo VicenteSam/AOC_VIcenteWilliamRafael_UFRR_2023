@@ -1,5 +1,5 @@
 Flow report for processor_16bits
-Wed Nov 29 10:07:57 2023
+Wed Nov 29 19:10:10 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Wed Nov 29 10:07:57 2023       ;
+; Flow Status                     ; Successful - Wed Nov 29 19:10:10 2023       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; processor_16bits                            ;
 ; Top-level Entity Name           ; Trinity                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 74 / 56,480 ( < 1 % )                       ;
-; Total registers                 ; 64                                          ;
+; Logic utilization (in ALMs)     ; 131 / 56,480 ( < 1 % )                      ;
+; Total registers                 ; 48                                          ;
 ; Total pins                      ; 146 / 268 ( 54 % )                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 64 / 7,024,640 ( < 1 % )                    ;
+; Total block memory bits         ; 128 / 7,024,640 ( < 1 % )                   ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
 ; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                               ;
 ; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                               ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/29/2023 10:00:34 ;
+; Start date & time ; 11/29/2023 19:07:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; processor_16bits    ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+------------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 238300923073299.170126643408004        ; --               ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 238300923073299.170129927212492        ; --               ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; None                                   ; --               ; --          ; eda_simulation ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; Off                                    ; --               ; --          ; eda_simulation ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --               ; --          ; eda_simulation ;
@@ -99,13 +99,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4874 MB             ; 00:00:18                           ;
-; Fitter               ; 00:00:43     ; 1.0                     ; 7032 MB             ; 00:01:40                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4825 MB             ; 00:00:06                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 5267 MB             ; 00:00:08                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4710 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4719 MB             ; 00:00:01                           ;
-; Total                ; 00:01:11     ; --                      ; --                  ; 00:02:14                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4900 MB             ; 00:00:19                           ;
+; Fitter               ; 00:01:08     ; 1.0                     ; 7042 MB             ; 00:02:48                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4825 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:07     ; 1.2                     ; 5265 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4711 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4722 MB             ; 00:00:01                           ;
+; Total                ; 00:01:32     ; --                      ; --                  ; 00:03:22                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

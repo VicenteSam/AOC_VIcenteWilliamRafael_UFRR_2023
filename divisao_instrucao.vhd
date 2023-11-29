@@ -19,6 +19,6 @@ ARCHITECTURE behavior OF  divisao_instrucao IS
         out_rs <= in_port(11 downto 8); -- 4 bits
         out_rt <= in_port(7 downto 4); -- 4 bits
 		  out_rd <= in_port(3 downto 0); -- 4 bits
-        out_jump(11 downto 0) <= in_port(11 downto 0);
-		  out_jump(15 downto 12) <= (others =>'0'); --12 bits
+        out_jump(3 downto 0) <= in_port(3 downto 0);
+		  out_jump(15 downto 4) <= (others =>'0'); --12 bits
  END behavior;

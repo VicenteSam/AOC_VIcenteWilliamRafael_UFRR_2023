@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Nov 29 10:07:55 2023
+    Info: Processing started: Wed Nov 29 19:10:08 2023
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off processor_16bits -c processor_16bits --vector_source=E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/Waveform1.vwf --testbench_file=E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim/Waveform1.vwf.vht
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -51,13 +51,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Nov 29 10:07:56 2023
+    Info: Processing started: Wed Nov 29 19:10:09 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim/ processor_16bits -c processor_16bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file processor_16bits.vho in folder "E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Wed Nov 29 10:07:57 2023
+    Info: Peak virtual memory: 4722 megabytes
+    Info: Processing ended: Wed Nov 29 19:10:10 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -77,13 +77,11 @@ Reading E:/IntelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # 10.5b
 
-
 # do processor_16bits.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:07:59 on Nov 29,2023
+# Start time: 19:10:10 on Nov 29,2023
 # vcom -work work processor_16bits.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -96,24 +94,23 @@ Reading E:/IntelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
 # -- Compiling entity Trinity
-
 # -- Compiling architecture structure of Trinity
-# End time: 10:07:59 on Nov 29,2023, Elapsed time: 0:00:00
+
+# End time: 19:10:10 on Nov 29,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 10:07:59 on Nov 29,2023
+# Start time: 19:10:10 on Nov 29,2023
 # vcom -work work Waveform1.vwf.vht 
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Trinity_vhd_vec_tst
 # -- Compiling architecture Trinity_arch of Trinity_vhd_vec_tst
-# End time: 10:07:59 on Nov 29,2023, Elapsed time: 0:00:00
+# End time: 19:10:11 on Nov 29,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Trinity_vhd_vec_tst 
-# Start time: 10:08:00 on Nov 29,2023
+# Start time: 19:10:11 on Nov 29,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -130,8 +127,8 @@ Reading E:/IntelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cyclonev.cyclonev_io_obuf(arch)
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_clkena(behavior)
-# Loading altera.dffeas(vital_dffeas)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
 # Loading cyclonev.cyclonev_ram_block(block_arch)
 # Loading sv_std.std
 # Loading altera_lnsim.generic_m10k
@@ -139,11 +136,11 @@ Reading E:/IntelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading altera_lnsim.common_28nm_ram_block
 # Loading altera_lnsim.common_28nm_ram_register
 # Loading altera_lnsim.common_28nm_ram_pulse_generator
-# ** Warning: Design size of 54770 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 71706 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 
-# End time: 10:08:00 on Nov 29,2023, Elapsed time: 0:00:00
+# End time: 19:10:11 on Nov 29,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
@@ -156,7 +153,7 @@ Reading E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulatio
 
 Processing channel transitions... 
 
-Writing the resulting VWF to E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim/processor_16bits_20231129100801.sim.vwf
+Writing the resulting VWF to E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim/processor_16bits_20231129191011.sim.vwf
 
 Finished VCD to VWF conversion.
 

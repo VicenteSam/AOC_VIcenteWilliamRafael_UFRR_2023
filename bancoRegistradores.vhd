@@ -17,7 +17,7 @@ END bancoRegistradores;
 
 ARCHITECTURE main OF bancoRegistradores IS 
 
-	TYPE bancoRegistradores IS ARRAY (0 TO 8)OF std_logic_vector (15 DOWNTO 0); -- verificar
+	TYPE bancoRegistradores IS ARRAY (0 TO 15)OF std_logic_vector (15 DOWNTO 0); -- verificar
 	SIGNAL registradores : bancoRegistradores;
 
 BEGIN
