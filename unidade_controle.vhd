@@ -19,119 +19,74 @@ END ENTITY;
 
 ARCHITECTURE Behavioral OF unidade_controle IS
 BEGIN
-    PROCESS(clock, opcode)
-    CONSTANT add   : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0000";
-    CONSTANT addi  : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0001";
-    CONSTANT sub   : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0010";
-    CONSTANT subi  : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0011";
-	 CONSTANT lw   : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0100";
-    CONSTANT sw    : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0101";
-    CONSTANT li    : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0110";
-	 CONSTANT beq  : STD_LOGIC_VECTOR(3 DOWNTO 0) := "0111";
-    CONSTANT if_op    : STD_LOGIC_VECTOR(3 DOWNTO 0) := "1000";
-    CONSTANT j   : STD_LOGIC_VECTOR(3 DOWNTO 0) := "1001";
-
-    BEGIN
-        CASE OPCODE IS 
-            WHEN ADD =>
-                ALUOP    <= ADD;
-                REGWRITE <= '1';
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';
-                ALUSRC   <= '0'; 			 
-            WHEN ADDI =>
-                ALUOP    <= ADDI;
-                ALUSRC   <= '1';
-                REGWRITE <= '1';
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';   		 
-            WHEN SUB =>
-                ALUOP    <= SUB;                
-                REGWRITE <= '1';
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';
-                ALUSRC   <= '0'; 				 
-            WHEN SUBI =>
-                ALUOP    <= SUBI;
-                ALUSRC   <= '1';
-                REGWRITE <= '1';
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0'; 			 
-            WHEN LW =>
-                ALUOP    <=  LW;
-                MEMREAD  <= '1';
-                MEMTOREG <= '1';
-                REGWRITE <= '1';
-                JUMP     <= '0';
-                BRANCH   <= '0';                                
-                MEMWRITE <= '0';
-                ALUSRC   <= '0';                
-            WHEN SW =>
-                ALUOP    <=  SW;
-                MEMWRITE <= '1';
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                                
-                ALUSRC   <= '0';
-                REGWRITE <= '0';
-            WHEN LI =>
-                ALUOP    <=  LI;
-                ALUSRC   <= '1';
-                REGWRITE <= '1';
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';  			 
-            WHEN BEQ =>
-                ALUOP    <= BEQ;
-                BRANCH   <= '1';
-                JUMP     <= '0';  
-                MEMREAD  <= '0';              
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';
-                ALUSRC   <= '0';
-                REGWRITE <= '0';
-	    WHEN IF_OP =>
-                ALUOP    <= IF_OP;
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';
-                ALUSRC   <= '0';
-                REGWRITE <= '0';
-            WHEN J =>
-                ALUOP    <=   J;
-                JUMP     <= '1';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';
-                ALUSRC   <= '0';
-                REGWRITE <= '0';
-            WHEN OTHERS => 
-                ALUOP    <=   J;
-                JUMP     <= '0';
-                BRANCH   <= '0';
-                MEMREAD  <= '0';
-                MEMTOREG <= '0';                
-                MEMWRITE <= '0';
-                ALUSRC   <= '0';
-                REGWRITE <= '0';
-            END CASE;           
-    END PROCESS;
-END;
+    process(Clock,OpCode)
+	 Constant Add	 : Std_logic_vector(3 DOWNTO 0) := "0000";
+	 Constant Sub	 : Std_logic_vector(3 DOWNTO 0) := "0001";
+	 Constant Lw		 : Std_logic_vector(3 DOWNTO 0) := "0010";
+	 Constant Sw		 : Std_logic_vector(3 DOWNTO 0) := "0011";
+	 Constant Beq	 : Std_logic_vector(3 DOWNTO 0) := "0100";
+	 Constant J		 : Std_logic_vector(3 DOWNTO 0) := "0101";
+    begin
+			case OpCode is
+				when Add =>
+					AluOp 	<= "0000";
+					Regwrite <= '0';
+					Jump 		<= '0';
+					Branch 	<= '0';
+					MemRead 	<= '0';
+					MemToReg <= '0';
+					MemWrite <= '0';
+					Alusrc 	<= '0';
+					
+				when Sub =>
+					AluOp 	<= "0001";
+					Regwrite <= '0';
+					Jump 		<= '0';
+					Branch 	<= '0';
+					MemRead 	<= '0';
+					MemToReg <= '0';
+					MemWrite <= '0';
+					Alusrc 	<= '0';
+					
+				when Lw =>
+					AluOp 	<= "0010";
+					Regwrite <= '1';
+					Jump 		<= '0';
+					Branch 	<= '0';
+					MemRead 	<= '1';
+					MemToReg <= '1';
+					MemWrite <= '0';
+					Alusrc 	<= '0';
+					
+				when Sw =>
+					AluOp 	<= "0011";
+					Regwrite <= '1';
+					Jump 		<= '0';
+					Branch 	<= '0';
+					MemRead 	<= '1';
+					MemToReg <= '1';
+					MemWrite <= '0';
+					Alusrc 	<= '0';
+					
+				when Beq =>
+					AluOp 	<= "0100";
+					Regwrite <= '0';
+					Jump 		<= '0';
+					Branch 	<= '1';
+					MemRead 	<= '0';
+					MemToReg <= '0';
+					MemWrite <= '0';
+					Alusrc 	<= '0';
+					
+				when others => --J
+					AluOp 	<= "0101";
+					Regwrite <= '0';
+					Jump 		<= '1';
+					Branch 	<= '0';
+					MemRead 	<= '0';
+					MemToReg <= '0';
+					MemWrite <= '0';
+					Alusrc 	<= '0';
+				end case;
+			end process;
+	end architecture;

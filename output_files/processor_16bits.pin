@@ -78,109 +78,109 @@ RREF                         : A1        :        :                   :         
 MSEL2                        : A2        :        :                   :         : 9A        :                
 VCCBAT                       : A3        : power  :                   : 1.2V    :           :                
 nCONFIG                      : A4        :        :                   :         : 9A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8A        :                
+outRom[12]                   : A5        : output : 2.5 V             :         : 8A        : N              
 VCCIO8A                      : A6        : power  :                   : 2.5V    : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 8A        :                
+outRom[4]                    : A7        : output : 2.5 V             :         : 8A        : N              
+out_endereco[8]              : A8        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A9        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 8A        :                
 GND                          : A11       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7A        :                
+out_opcode[2]                : A12       : output : 2.5 V             :         : 7A        : N              
+outRam[0]                    : A13       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7A        :                
+outRam[15]                   : A15       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : A16       : power  :                   : 2.5V    : 7A        :                
-outRom[8]                    : A17       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A17       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7A        :                
-out_rs[1]                    : A20       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 7A        :                
 GND                          : A21       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A22       :        :                   :         : 7A        :                
+out_rt[2]                    : A22       : output : 2.5 V             :         : 7A        : N              
 GND                          : AA1       :        :                   :         : B0L       :                
 GND                          : AA2       :        :                   :         : B0L       :                
 GND                          : AA3       : gnd    :                   :         :           :                
 GND                          : AA4       : gnd    :                   :         :           :                
 AS_DATA2, DATA2              : AA5       :        :                   :         : 3A        :                
 GND                          : AA6       : gnd    :                   :         :           :                
-out_br_regA[6]               : AA7       : output : 2.5 V             :         : 3B        : N              
-out_br_regA[11]              : AA8       : output : 2.5 V             :         : 3B        : N              
-out_br_regA[2]               : AA9       : output : 2.5 V             :         : 3B        : N              
-outUla[2]                    : AA10      : output : 2.5 V             :         : 3B        : N              
+out_br_regA[7]               : AA7       : output : 2.5 V             :         : 3B        : N              
+out_br_regA[14]              : AA8       : output : 2.5 V             :         : 3B        : N              
+outUla[10]                   : AA9       : output : 2.5 V             :         : 3B        : N              
+out_br_regA[15]              : AA10      : output : 2.5 V             :         : 3B        : N              
 GND                          : AA11      : gnd    :                   :         :           :                
-out_br_regB[1]               : AA12      : output : 2.5 V             :         : 3B        : N              
-out_out_mult4_2X1_ram_ula[1] : AA13      : output : 2.5 V             :         : 4A        : N              
-outRam[1]                    : AA14      : output : 2.5 V             :         : 4A        : N              
-outUla[14]                   : AA15      : output : 2.5 V             :         : 4A        : N              
+out_br_regA[2]               : AA12      : output : 2.5 V             :         : 3B        : N              
+out_br_regA[4]               : AA13      : output : 2.5 V             :         : 4A        : N              
+outPc[9]                     : AA14      : output : 2.5 V             :         : 4A        : N              
+outUla[4]                    : AA15      : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : AA16      : power  :                   : 2.5V    : 4A        :                
-outUla[9]                    : AA17      : output : 2.5 V             :         : 4A        : N              
-outUla[1]                    : AA18      : output : 2.5 V             :         : 4A        : N              
-out_out_mult4_2X1_ram_ula[4] : AA19      : output : 2.5 V             :         : 4A        : N              
-out_out_mult4_2X1_ram_ula[2] : AA20      : output : 2.5 V             :         : 4A        : N              
+out_out_mult4_2X1_ram_ula[15] : AA17      : output : 2.5 V             :         : 4A        : N              
+out_br_regB[5]               : AA18      : output : 2.5 V             :         : 4A        : N              
+outPc[11]                    : AA19      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4A        :                
 VCCIO4A                      : AA21      : power  :                   : 2.5V    : 4A        :                
-out_out_mult4_2X1_ram_ula[7] : AA22      : output : 2.5 V             :         : 4A        : N              
+outRom[14]                   : AA22      : output : 2.5 V             :         : 4A        : N              
 GND                          : AB1       : gnd    :                   :         :           :                
 GND                          : AB2       : gnd    :                   :         :           :                
 AS_DATA1, DATA1              : AB3       :        :                   :         : 3A        :                
 AS_DATA0, ASDO, DATA0        : AB4       :        :                   :         : 3A        :                
-out_br_regA[3]               : AB5       : output : 2.5 V             :         : 3B        : N              
-out_br_regA[15]              : AB6       : output : 2.5 V             :         : 3B        : N              
-out_br_regA[5]               : AB7       : output : 2.5 V             :         : 3B        : N              
-out_br_regA[4]               : AB8       : output : 2.5 V             :         : 3B        : N              
+out_br_regB[8]               : AB5       : output : 2.5 V             :         : 3B        : N              
+out_out_mult4_2X1_ram_ula[11] : AB6       : output : 2.5 V             :         : 3B        : N              
+out_br_regA[6]               : AB7       : output : 2.5 V             :         : 3B        : N              
+outPc[0]                     : AB8       : output : 2.5 V             :         : 3B        : N              
 GND                          : AB9       : gnd    :                   :         :           :                
-out_out_mult4_2X1_ram_ula[12] : AB10      : output : 2.5 V             :         : 3B        : N              
-out_br_regB[2]               : AB11      : output : 2.5 V             :         : 3B        : N              
-out_br_regB[3]               : AB12      : output : 2.5 V             :         : 4A        : N              
-out_br_regB[10]              : AB13      : output : 2.5 V             :         : 4A        : N              
+outPc[6]                     : AB10      : output : 2.5 V             :         : 3B        : N              
+out_br_regB[11]              : AB11      : output : 2.5 V             :         : 3B        : N              
+out_out_mult4_2X1_ram_ula[4] : AB12      : output : 2.5 V             :         : 4A        : N              
+outUla[3]                    : AB13      : output : 2.5 V             :         : 4A        : N              
 GND                          : AB14      : gnd    :                   :         :           :                
-outUla[7]                    : AB15      : output : 2.5 V             :         : 4A        : N              
+outUla[5]                    : AB15      : output : 2.5 V             :         : 4A        : N              
 VREFB4AN0                    : AB16      : power  :                   :         : 4A        :                
-outUla[15]                   : AB17      : output : 2.5 V             :         : 4A        : N              
-outRam[13]                   : AB18      : output : 2.5 V             :         : 4A        : N              
+out_br_regB[4]               : AB17      : output : 2.5 V             :         : 4A        : N              
+out_out_mult4_2X1_ram_ula[3] : AB18      : output : 2.5 V             :         : 4A        : N              
 GND                          : AB19      : gnd    :                   :         :           :                
-out_out_mult4_2X1_ram_ula[15] : AB20      : output : 2.5 V             :         : 4A        : N              
-out_br_regB[13]              : AB21      : output : 2.5 V             :         : 4A        : N              
-outRom[6]                    : AB22      : output : 2.5 V             :         : 4A        : N              
+outPc[13]                    : AB20      : output : 2.5 V             :         : 4A        : N              
+outPc[10]                    : AB21      : output : 2.5 V             :         : 4A        : N              
+out_rd[0]                    : AB22      : output : 2.5 V             :         : 4A        : N              
 GND                          : B1        : gnd    :                   :         :           :                
 GND                          : B2        : gnd    :                   :         :           :                
 DNU                          : B3        :        :                   :         :           :                
 DNU                          : B4        :        :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8A        :                
-outRom[7]                    : B7        : output : 2.5 V             :         : 8A        : N              
+out_br_regA[1]               : B5        : output : 2.5 V             :         : 8A        : N              
+out_endereco[4]              : B6        : output : 2.5 V             :         : 8A        : N              
+out_rt[0]                    : B7        : output : 2.5 V             :         : 8A        : N              
 VREFB8AN0                    : B8        : power  :                   :         : 8A        :                
 GND                          : B9        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 8A        :                
+outRam[6]                    : B10       : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 7A        :                
-outRom[13]                   : B12       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 7A        :                
 GND                          : B14       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B15       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 7A        :                
-outRom[5]                    : B18       : output : 2.5 V             :         : 7A        : N              
+outRam[9]                    : B17       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B18       :        :                   :         : 7A        :                
 VCCIO7A                      : B19       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B20       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B22       :        :                   :         : 7A        :                
+out_rd[3]                    : B22       : output : 2.5 V             :         : 7A        : N              
 GND                          : C1        :        :                   :         : B1L       :                
 GND                          : C2        :        :                   :         : B1L       :                
 GND                          : C3        : gnd    :                   :         :           :                
 GND                          : C4        : gnd    :                   :         :           :                
 GND                          : C5        :        :                   :         : 9A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8A        :                
+out_rs[0]                    : C6        : output : 2.5 V             :         : 8A        : N              
 VCCIO8A                      : C7        : power  :                   : 2.5V    : 8A        :                
-outRom[0]                    : C8        : output : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 8A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8A        :                
+out_opcode[0]                : C9        : output : 2.5 V             :         : 8A        : N              
 VCCPD7A8A                    : C10       : power  :                   : 2.5V    : 7A, 8A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7A        :                
 VCCIO7A                      : C12       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 7A        :                
 VREFB7AN0                    : C14       : power  :                   :         : 7A        :                
-out_rs[3]                    : C15       : output : 2.5 V             :         : 7A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7A        :                
+outRam[7]                    : C16       : output : 2.5 V             :         : 7A        : N              
 GND                          : C17       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C19       :        :                   :         : 7A        :                
+outRam[2]                    : C18       : output : 2.5 V             :         : 7A        : N              
+outRam[1]                    : C19       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C20       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C21       :        :                   :         : 7A        :                
 VCCIO7A                      : C22       : power  :                   : 2.5V    : 7A        :                
@@ -189,13 +189,13 @@ GND                          : D2        : gnd    :                   :         
 GXB_NC                       : D3        :        :                   :         : B1L       :                
 GXB_NC                       : D4        :        :                   :         : B1L       :                
 GND                          : D5        : gnd    :                   :         :           :                
-outUla[8]                    : D6        : output : 2.5 V             :         : 8A        : N              
-outRam[6]                    : D7        : output : 2.5 V             :         : 8A        : N              
+outRom[3]                    : D6        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8A        :                
 VCCPD7A8A                    : D8        : power  :                   : 2.5V    : 7A, 8A    :                
-out_endereco[0]              : D9        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 8A        :                
 GND                          : D10       : gnd    :                   :         :           :                
 VCC_AUX                      : D11       : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7A        :                
+outRam[13]                   : D12       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 7A        :                
 VCCPD7A8A                    : D14       : power  :                   : 2.5V    : 7A, 8A    :                
 VCCIO7A                      : D15       : power  :                   : 2.5V    : 7A        :                
@@ -205,28 +205,28 @@ VCC_AUX                      : D18       : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 7A        :                
 GND                          : D20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D22       :        :                   :         : 7A        :                
+out_endereco[2]              : D22       : output : 2.5 V             :         : 7A        : N              
 GXB_NC                       : E1        :        :                   :         : B1L       :                
 GXB_NC                       : E2        :        :                   :         : B1L       :                
 GND                          : E3        : gnd    :                   :         :           :                
 GND                          : E4        : gnd    :                   :         :           :                
 MSEL3                        : E5        :        :                   :         : 9A        :                
 VCC_AUX                      : E6        : power  :                   : 2.5V    :           :                
-outRam[15]                   : E7        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8A        :                
 VCCIO8A                      : E8        : power  :                   : 2.5V    : 8A        :                
-outRam[14]                   : E9        : output : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 8A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8A        :                
+out_br_regA[0]               : E10       : output : 2.5 V             :         : 8A        : N              
 VCCPD7A8A                    : E11       : power  :                   : 2.5V    : 7A, 8A    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 7A        :                
 GND                          : E13       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7A        :                
-outRom[11]                   : E15       : output : 2.5 V             :         : 7A        : N              
+outRam[10]                   : E15       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E16       :        :                   :         : 7A        :                
 DNU                          : E17       :        :                   :         :           :                
 VCCIO7A                      : E18       : power  :                   : 2.5V    : 7A        :                
-out_rs[0]                    : E19       : output : 2.5 V             :         : 7A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : E20       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E21       :        :                   :         : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E19       :        :                   :         : 7A        :                
+outRom[10]                   : E20       : output : 2.5 V             :         : 7A        : N              
+outRom[2]                    : E21       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :         : 7A        :                
 GND                          : F1        : gnd    :                   :         :           :                
 GND                          : F2        : gnd    :                   :         :           :                
@@ -234,65 +234,65 @@ MSEL4                        : F3        :        :                   :         
 VCCA_FPLL                    : F4        : power  :                   : 2.5V    :           :                
 GND                          : F5        :        :                   :         : B1L       :                
 GND                          : F6        : gnd    :                   :         :           :                
-outPc[5]                     : F7        : output : 2.5 V             :         : 8A        : N              
+outUla[11]                   : F7        : output : 2.5 V             :         : 8A        : N              
 VCCPGM                       : F8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 8A        :                
+outRom[8]                    : F9        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F10       :        :                   :         : 8A        :                
 VCCIO7A                      : F11       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F12       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 7A        :                
+out_endereco[6]              : F13       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 7A        :                
-outRom[9]                    : F15       : output : 2.5 V             :         : 7A        : N              
+out_rt[1]                    : F15       : output : 2.5 V             :         : 7A        : N              
 GND                          : F16       : gnd    :                   :         :           :                
 GND                          : F17       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F18       :        :                   :         : 7A        :                
-out_rt[1]                    : F19       : output : 2.5 V             :         : 7A        : N              
+outRam[12]                   : F18       : output : 2.5 V             :         : 7A        : N              
+out_endereco[15]             : F19       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : F20       :        :                   :         : 7A        :                
 VCCIO7A                      : F21       : power  :                   : 2.5V    : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 7A        :                
+outRom[11]                   : F22       : output : 2.5 V             :         : 7A        : N              
 GND                          : G1        :        :                   :         : B1L       :                
 GND                          : G2        :        :                   :         : B1L       :                
 GND                          : G3        : gnd    :                   :         :           :                
 GND                          : G4        :        :                   :         : B1L       :                
 nCE                          : G5        :        :                   :         : 9A        :                
-outUla[10]                   : G6        : output : 2.5 V             :         : 8A        : N              
+outRam[11]                   : G6        : output : 2.5 V             :         : 8A        : N              
 VCCIO8A                      : G7        : power  :                   : 2.5V    : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G8        :        :                   :         : 8A        :                
 GND                          : G9        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G11       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G12       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G13       :        :                   :         : 7A        :                
+outRam[4]                    : G12       : output : 2.5 V             :         : 7A        : N              
+out_endereco[3]              : G13       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : G14       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 7A        :                
+out_rs[1]                    : G16       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G18       :        :                   :         : 7A        :                
+outRam[3]                    : G18       : output : 2.5 V             :         : 7A        : N              
 GND                          : G19       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G20       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G21       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 7A        :                
+out_endereco[5]              : G22       : output : 2.5 V             :         : 7A        : N              
 GND                          : H1        : gnd    :                   :         :           :                
 GND                          : H2        : gnd    :                   :         :           :                
 GND                          : H3        : gnd    :                   :         :           :                
 GND                          : H4        : gnd    :                   :         :           :                
 nSTATUS                      : H5        :        :                   :         : 9A        :                
-outUla[11]                   : H6        : output : 2.5 V             :         : 8A        : N              
+outUla[13]                   : H6        : output : 2.5 V             :         : 8A        : N              
 GND                          : H7        : gnd    :                   :         :           :                
-outRom[1]                    : H8        : output : 2.5 V             :         : 8A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 8A        :                
+out_endereco[10]             : H8        : output : 2.5 V             :         : 8A        : N              
+out_endereco[11]             : H9        : output : 2.5 V             :         : 8A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H11       :        :                   :         : 7A        :                
 GND                          : H12       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H13       :        :                   :         : 7A        :                
+outRom[7]                    : H13       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : H14       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H16       :        :                   :         : 7A        :                
+out_rs[3]                    : H15       : output : 2.5 V             :         : 7A        : N              
+out_rs[2]                    : H16       : output : 2.5 V             :         : 7A        : N              
 VCCIO7A                      : H17       : power  :                   : 2.5V    : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H18       :        :                   :         : 7A        :                
 VCCA_FPLL                    : H19       : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : H20       :        :                   :         : 7A        :                
-outRom[3]                    : H21       : output : 2.5 V             :         : 7A        : N              
+outRam[14]                   : H20       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H21       :        :                   :         : 7A        :                
 GND                          : H22       : gnd    :                   :         :           :                
 GXB_NC                       : J1        :        :                   :         : B1L       :                
 GXB_NC                       : J2        :        :                   :         : B1L       :                
@@ -304,18 +304,18 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : J7        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 8A        :                
 VCC                          : J10       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 7A        :                
+out_endereco[14]             : J11       : output : 2.5 V             :         : 7A        : N              
 VCC                          : J12       : power  :                   : 1.1V    :           :                
-out_opcode[1]                : J13       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 7A        :                
 VCC                          : J14       : power  :                   : 1.1V    :           :                
 GND                          : J15       : gnd    :                   :         :           :                
 VCC                          : J16       : power  :                   : 1.1V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J17       :        :                   :         : 7A        :                
+out_endereco[9]              : J17       : output : 2.5 V             :         : 7A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : J18       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J19       :        :                   :         : 7A        :                
 GND                          : J20       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J21       :        :                   :         : 7A        :                
-out_endereco[1]              : J22       : output : 2.5 V             :         : 7A        : N              
+outRom[15]                   : J21       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J22       :        :                   :         : 7A        :                
 GND                          : K1        : gnd    :                   :         :           :                
 GND                          : K2        : gnd    :                   :         :           :                
 VCCL_GXBL                    : K3        : power  :                   : 1.1V    :           :                
@@ -336,7 +336,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : K17       :        :                   :      
 VCCIO5B                      : K18       : power  :                   : 2.5V    : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K19       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K20       :        :                   :         : 7A        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K21       :        :                   :         : 5B        :                
+out_endereco[12]             : K21       : output : 2.5 V             :         : 5B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K22       :        :                   :         : 5B        :                
 GND                          : L1        :        :                   :         : B1L       :                
 GND                          : L2        :        :                   :         : B1L       :                
@@ -344,7 +344,7 @@ GND                          : L3        : gnd    :                   :         
 VCCE_GXBL                    : L4        : power  :                   : 1.1V    :           :                
 GND                          : L5        : gnd    :                   :         :           :                
 MSEL0                        : L6        :        :                   :         : 9A        :                
-out_rt[3]                    : L7        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L7        :        :                   :         : 8A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 7A        :                
 DNU                          : L9        :        :                   :         :           :                
 VCC                          : L10       : power  :                   : 1.1V    :           :                
@@ -365,10 +365,10 @@ GND                          : M2        : gnd    :                   :         
 VCCH_GXBL                    : M3        : power  :                   : 2.5V    :           :                
 GND                          : M4        : gnd    :                   :         :           :                
 TDO                          : M5        : output :                   :         : 3A        :                
-outPc[13]                    : M6        : output : 2.5 V             :         : 3A        : N              
-outUla[6]                    : M7        : output : 2.5 V             :         : 3A        : N              
-outPc[0]                     : M8        : output : 2.5 V             :         : 3B        : N              
-outRam[8]                    : M9        : output : 2.5 V             :         : 3B        : N              
+outUla[9]                    : M6        : output : 2.5 V             :         : 3A        : N              
+outUla[8]                    : M7        : output : 2.5 V             :         : 3A        : N              
+out_br_regB[6]               : M8        : output : 2.5 V             :         : 3B        : N              
+out_br_regB[12]              : M9        : output : 2.5 V             :         : 3B        : N              
 GND                          : M10       : gnd    :                   :         :           :                
 VCC                          : M11       : power  :                   : 1.1V    :           :                
 GND                          : M12       : gnd    :                   :         :           :                
@@ -387,20 +387,20 @@ GXB_NC                       : N2        :        :                   :         
 GND                          : N3        : gnd    :                   :         :           :                
 VCCE_GXBL                    : N4        : power  :                   : 1.1V    :           :                
 GND                          : N5        : gnd    :                   :         :           :                
-out_br_regB[7]               : N6        : output : 2.5 V             :         : 3A        : N              
+out_endereco[13]             : N6        : output : 2.5 V             :         : 3A        : N              
 GND                          : N7        : gnd    :                   :         :           :                
-outPc[4]                     : N8        : output : 2.5 V             :         : 3B        : N              
-out_out_mult4_2X1_ram_ula[0] : N9        : output : 2.5 V             :         : 3B        : N              
+out_out_mult4_2X1_ram_ula[6] : N8        : output : 2.5 V             :         : 3B        : N              
+out_out_mult4_2X1_ram_ula[1] : N9        : output : 2.5 V             :         : 3B        : N              
 VCC                          : N10       : power  :                   : 1.1V    :           :                
 GND                          : N11       : gnd    :                   :         :           :                
 VCC                          : N12       : power  :                   : 1.1V    :           :                
 GND                          : N13       : gnd    :                   :         :           :                
 VCC                          : N14       : power  :                   : 1.1V    :           :                
 GND                          : N15       : gnd    :                   :         :           :                
-out_rs[2]                    : N16       : output : 2.5 V             :         : 5B        : N              
+outRom[9]                    : N16       : output : 2.5 V             :         : 5B        : N              
 GND                          : N17       : gnd    :                   :         :           :                
 VCCPD5B                      : N18       : power  :                   : 2.5V    : 5B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N19       :        :                   :         : 5B        :                
+out_rd[2]                    : N19       : output : 2.5 V             :         : 5B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : N20       :        :                   :         : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N21       :        :                   :         : 5B        :                
 GND                          : N22       : gnd    :                   :         :           :                
@@ -409,109 +409,109 @@ GND                          : P2        : gnd    :                   :         
 VCCL_GXBL                    : P3        : power  :                   : 1.1V    :           :                
 GND                          : P4        : gnd    :                   :         :           :                
 TMS                          : P5        : input  :                   :         : 3A        :                
-out_br_regB[11]              : P6        : output : 2.5 V             :         : 3A        : N              
-outUla[12]                   : P7        : output : 2.5 V             :         : 3A        : N              
-out_br_regA[14]              : P8        : output : 2.5 V             :         : 3B        : N              
-out_out_mult4_2X1_ram_ula[8] : P9        : output : 2.5 V             :         : 3B        : N              
+outRom[6]                    : P6        : output : 2.5 V             :         : 3A        : N              
+out_out_mult4_2X1_ram_ula[8] : P7        : output : 2.5 V             :         : 3A        : N              
+outUla[7]                    : P8        : output : 2.5 V             :         : 3B        : N              
+out_br_regA[3]               : P9        : output : 2.5 V             :         : 3B        : N              
 GND                          : P10       : gnd    :                   :         :           :                
 VCC                          : P11       : power  :                   : 1.1V    :           :                
-out_br_regA[9]               : P12       : output : 2.5 V             :         : 3B        : N              
+outUla[0]                    : P12       : output : 2.5 V             :         : 3B        : N              
 VCC                          : P13       : power  :                   : 1.1V    :           :                
-out_out_mult4_2X1_ram_ula[3] : P14       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 4A        :                
 VCC                          : P15       : power  :                   : 1.1V    :           :                
-out_opcode[0]                : P16       : output : 2.5 V             :         : 5A        : N              
-out_rt[0]                    : P17       : output : 2.5 V             :         : 5A        : N              
-outRom[12]                   : P18       : output : 2.5 V             :         : 5A        : N              
-outRom[4]                    : P19       : output : 2.5 V             :         : 5A        : N              
+out_br_regB[9]               : P16       : output : 2.5 V             :         : 5A        : N              
+out_out_mult4_2X1_ram_ula[2] : P17       : output : 2.5 V             :         : 5A        : N              
+outUla[14]                   : P18       : output : 2.5 V             :         : 5A        : N              
+outUla[15]                   : P19       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : P20       : power  :                   : 2.5V    : 5A        :                
 VCCPD5A                      : P21       : power  :                   : 2.5V    : 5A        :                
-outUla[4]                    : P22       : output : 2.5 V             :         : 5A        : N              
+out_br_regB[10]              : P22       : output : 2.5 V             :         : 5A        : N              
 GND                          : R1        :        :                   :         : B0L       :                
 GND                          : R2        :        :                   :         : B0L       :                
 GND                          : R3        : gnd    :                   :         :           :                
 nCSO, DATA4                  : R4        :        :                   :         : 3A        :                
-out_endereco[3]              : R5        : output : 2.5 V             :         : 3A        : N              
-outPc[14]                    : R6        : output : 2.5 V             :         : 3A        : N              
-outRam[2]                    : R7        : output : 2.5 V             :         : 3A        : N              
+outRom[5]                    : R5        : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 3A        :                
+out_out_mult4_2X1_ram_ula[10] : R7        : output : 2.5 V             :         : 3A        : N              
 VCCIO3B                      : R8        : power  :                   : 2.5V    : 3B        :                
-out_br_regB[14]              : R9        : output : 2.5 V             :         : 3B        : N              
-out_br_regB[6]               : R10       : output : 2.5 V             :         : 3B        : N              
-out_out_mult4_2X1_ram_ula[13] : R11       : output : 2.5 V             :         : 3B        : N              
-out_br_regA[13]              : R12       : output : 2.5 V             :         : 3B        : N              
+outPc[7]                     : R9        : output : 2.5 V             :         : 3B        : N              
+outUla[1]                    : R10       : output : 2.5 V             :         : 3B        : N              
+outPc[3]                     : R11       : output : 2.5 V             :         : 3B        : N              
+outPc[5]                     : R12       : output : 2.5 V             :         : 3B        : N              
 GND                          : R13       : gnd    :                   :         :           :                
-out_endereco[2]              : R14       : output : 2.5 V             :         : 4A        : N              
-out_br_regA[0]               : R15       : output : 2.5 V             :         : 5A        : N              
-outRam[3]                    : R16       : output : 2.5 V             :         : 5A        : N              
-outUla[3]                    : R17       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R15       :        :                   :         : 5A        :                
+out_br_regB[14]              : R16       : output : 2.5 V             :         : 5A        : N              
+out_br_regA[10]              : R17       : output : 2.5 V             :         : 5A        : N              
 VCCIO5A                      : R18       : power  :                   : 2.5V    : 5A        :                
 VCCPGM                       : R19       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
 VREFB5AN0                    : R20       : power  :                   :         : 5A        :                
-outRam[5]                    : R21       : output : 2.5 V             :         : 5A        : N              
-out_br_regB[15]              : R22       : output : 2.5 V             :         : 5A        : N              
+out_br_regB[2]               : R21       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R22       :        :                   :         : 5A        :                
 GND                          : T1        : gnd    :                   :         :           :                
 GND                          : T2        : gnd    :                   :         :           :                
 VCCH_GXBL                    : T3        : power  :                   : 2.5V    :           :                
 AS_DATA3, DATA3              : T4        :        :                   :         : 3A        :                
 VCCA_FPLL                    : T5        : power  :                   : 2.5V    :           :                
 VCCIO3A                      : T6        : power  :                   : 2.5V    : 3A        :                
-outPc[2]                     : T7        : output : 2.5 V             :         : 3A        : N              
-outPc[3]                     : T8        : output : 2.5 V             :         : 3A        : N              
-outRam[11]                   : T9        : output : 2.5 V             :         : 3B        : N              
-out_br_regB[9]               : T10       : output : 2.5 V             :         : 3B        : N              
+out_out_mult4_2X1_ram_ula[12] : T7        : output : 2.5 V             :         : 3A        : N              
+out_br_regB[7]               : T8        : output : 2.5 V             :         : 3A        : N              
+outPc[1]                     : T9        : output : 2.5 V             :         : 3B        : N              
+out_br_regA[9]               : T10       : output : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : T11       : power  :                   : 2.5V    : 3B        :                
-outPc[9]                     : T12       : output : 2.5 V             :         : 4A        : N              
-outPc[8]                     : T13       : output : 2.5 V             :         : 4A        : N              
-outUla[0]                    : T14       : output : 2.5 V             :         : 4A        : N              
-out_br_regA[7]               : T15       : output : 2.5 V             :         : 5A        : N              
+outPc[8]                     : T12       : output : 2.5 V             :         : 4A        : N              
+outPc[12]                    : T13       : output : 2.5 V             :         : 4A        : N              
+out_br_regB[13]              : T14       : output : 2.5 V             :         : 4A        : N              
+out_out_mult4_2X1_ram_ula[0] : T15       : output : 2.5 V             :         : 5A        : N              
 GND                          : T16       : gnd    :                   :         :           :                
-outRom[10]                   : T17       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T17       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T18       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T19       :        :                   :         : 5A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T20       :        :                   :         : 5A        :                
 GND                          : T21       : gnd    :                   :         :           :                
-out_br_regA[12]              : T22       : output : 2.5 V             :         : 5A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T22       :        :                   :         : 5A        :                
 GXB_NC                       : U1        :        :                   :         : B0L       :                
 GXB_NC                       : U2        :        :                   :         : B0L       :                
 GND                          : U3        : gnd    :                   :         :           :                
 GND                          : U4        :        :                   :         : B0L       :                
 GND                          : U5        : gnd    :                   :         :           :                
-outPc[11]                    : U6        : output : 2.5 V             :         : 3A        : N              
-outPc[12]                    : U7        : output : 2.5 V             :         : 3A        : N              
-outPc[15]                    : U8        : output : 2.5 V             :         : 3A        : N              
+out_out_mult4_2X1_ram_ula[7] : U6        : output : 2.5 V             :         : 3A        : N              
+outRam[5]                    : U7        : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U8        :        :                   :         : 3A        :                
 GND                          : U9        : gnd    :                   :         :           :                
-out_br_regA[1]               : U10       : output : 2.5 V             :         : 3B        : N              
-out_br_regA[8]               : U11       : output : 2.5 V             :         : 3B        : N              
-outRam[10]                   : U12       : output : 2.5 V             :         : 3B        : N              
-out_br_regB[12]              : U13       : output : 2.5 V             :         : 4A        : N              
+out_br_regA[12]              : U10       : output : 2.5 V             :         : 3B        : N              
+ula_overflow_out             : U11       : output : 2.5 V             :         : 3B        : N              
+outPc[4]                     : U12       : output : 2.5 V             :         : 3B        : N              
+outPc[2]                     : U13       : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : U14       : power  :                   : 2.5V    : 4A        :                
-outUla[5]                    : U15       : output : 2.5 V             :         : 4A        : N              
+out_out_mult4_2X1_ram_ula[13] : U15       : output : 2.5 V             :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : U16       :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : U17       :        :                   :         : 4A        :                
 VCCA_FPLL                    : U18       : power  :                   : 2.5V    :           :                
 VCCIO4A                      : U19       : power  :                   : 2.5V    : 4A        :                
-out_br_regB[4]               : U20       : output : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : U21       :        :                   :         : 4A        :                
-outRom[15]                   : U22       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U20       :        :                   :         : 4A        :                
+out_endereco[7]              : U21       : output : 2.5 V             :         : 4A        : N              
+out_br_regB[0]               : U22       : output : 2.5 V             :         : 4A        : N              
 GND                          : V1        : gnd    :                   :         :           :                
 GND                          : V2        : gnd    :                   :         :           :                
 DCLK                         : V3        :        :                   :         : 3A        :                
 GND                          : V4        :        :                   :         : B0L       :                
 TCK                          : V5        : input  :                   :         : 3A        :                
-outPc[6]                     : V6        : output : 2.5 V             :         : 3A        : N              
+out_out_mult4_2X1_ram_ula[9] : V6        : output : 2.5 V             :         : 3A        : N              
 GND                          : V7        : gnd    :                   :         :           :                
 VCCPGM                       : V8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
-outPc[1]                     : V9        : output : 2.5 V             :         : 3B        : N              
-outPc[7]                     : V10       : output : 2.5 V             :         : 3B        : N              
+out_br_regA[8]               : V9        : output : 2.5 V             :         : 3B        : N              
+outUla[6]                    : V10       : output : 2.5 V             :         : 3B        : N              
 DNU                          : V11       :        :                   :         :           :                
 GND                          : V12       : gnd    :                   :         :           :                
-out_br_regB[0]               : V13       : output : 2.5 V             :         : 4A        : N              
-outRam[7]                    : V14       : output : 2.5 V             :         : 4A        : N              
-outUla[13]                   : V15       : output : 2.5 V             :         : 4A        : N              
-out_out_mult4_2X1_ram_ula[10] : V16       : output : 2.5 V             :         : 4A        : N              
+out_br_regA[5]               : V13       : output : 2.5 V             :         : 4A        : N              
+out_out_mult4_2X1_ram_ula[5] : V14       : output : 2.5 V             :         : 4A        : N              
+out_br_regA[13]              : V15       : output : 2.5 V             :         : 4A        : N              
+outRom[0]                    : V16       : output : 2.5 V             :         : 4A        : N              
 GND                          : V17       : gnd    :                   :         :           :                
-out_opcode[3]                : V18       : output : 2.5 V             :         : 4A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : V19       :        :                   :         : 4A        :                
-out_out_mult4_2X1_ram_ula[5] : V20       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V18       :        :                   :         : 4A        :                
+out_opcode[3]                : V19       : output : 2.5 V             :         : 4A        : N              
+outPc[15]                    : V20       : output : 2.5 V             :         : 4A        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : V21       :        :                   :         : 4A        :                
 GND                          : V22       : gnd    :                   :         :           :                
 GND                          : W1        :        :                   :         : B0L       :                
@@ -521,21 +521,21 @@ GND                          : W4        : gnd    :                   :         
 TDI                          : W5        : input  :                   :         : 3A        :                
 VCCPD3A                      : W6        : power  :                   : 2.5V    : 3A        :                
 VCC_AUX                      : W7        : power  :                   : 2.5V    :           :                
-outRam[0]                    : W8        : output : 2.5 V             :         : 3A        : N              
-outPc[10]                    : W9        : output : 2.5 V             :         : 3A        : N              
+outRam[8]                    : W8        : output : 2.5 V             :         : 3A        : N              
+out_br_regA[11]              : W9        : output : 2.5 V             :         : 3A        : N              
 VCCIO3B                      : W10       : power  :                   : 2.5V    : 3B        :                
 VCCPD3B4A                    : W11       : power  :                   : 2.5V    : 3B, 4A    :                
 VCCPD3B4A                    : W12       : power  :                   : 2.5V    : 3B, 4A    :                
 VCC_AUX                      : W13       : power  :                   : 2.5V    :           :                
 VCCPD3B4A                    : W14       : power  :                   : 2.5V    : 3B, 4A    :                
 VCCIO4A                      : W15       : power  :                   : 2.5V    : 4A        :                
-out_rt[2]                    : W16       : output : 2.5 V             :         : 4A        : N              
+out_endereco[0]              : W16       : output : 2.5 V             :         : 4A        : N              
 VCCPD3B4A                    : W17       : power  :                   : 2.5V    : 3B, 4A    :                
 VCC_AUX                      : W18       : power  :                   : 2.5V    :           :                
-out_out_mult4_2X1_ram_ula[6] : W19       : output : 2.5 V             :         : 4A        : N              
+out_br_regB[3]               : W19       : output : 2.5 V             :         : 4A        : N              
 VCCIO4A                      : W20       : power  :                   : 2.5V    : 4A        :                
-outRom[2]                    : W21       : output : 2.5 V             :         : 4A        : N              
-outRom[14]                   : W22       : output : 2.5 V             :         : 4A        : N              
+out_rt[3]                    : W21       : output : 2.5 V             :         : 4A        : N              
+out_br_regB[1]               : W22       : output : 2.5 V             :         : 4A        : N              
 GND                          : Y1        : gnd    :                   :         :           :                
 GND                          : Y2        : gnd    :                   :         :           :                
 GXB_NC                       : Y3        :        :                   :         : B0L       :                
@@ -544,17 +544,17 @@ GND                          : Y5        : gnd    :                   :         
 DNU                          : Y6        :        :                   :         :           :                
 VREFB3AN0                    : Y7        : power  :                   :         : 3A        :                
 VCCIO3A                      : Y8        : power  :                   : 2.5V    : 3A        :                
-out_br_regB[5]               : Y9        : output : 2.5 V             :         : 3B        : N              
-out_br_regA[10]              : Y10       : output : 2.5 V             :         : 3B        : N              
-out_br_regB[8]               : Y11       : output : 2.5 V             :         : 3B        : N              
+out_br_regB[15]              : Y9        : output : 2.5 V             :         : 3B        : N              
+outUla[12]                   : Y10       : output : 2.5 V             :         : 3B        : N              
+outUla[2]                    : Y11       : output : 2.5 V             :         : 3B        : N              
 VREFB3BN0                    : Y12       : power  :                   :         : 3B        :                
 VCCIO3B                      : Y13       : power  :                   : 2.5V    : 3B        :                
-outRam[4]                    : Y14       : output : 2.5 V             :         : 4A        : N              
-outRam[9]                    : Y15       : output : 2.5 V             :         : 4A        : N              
-overflow                     : Y16       : output : 2.5 V             :         : 4A        : N              
-out_out_mult4_2X1_ram_ula[11] : Y17       : output : 2.5 V             :         : 4A        : N              
+out_opcode[1]                : Y14       : output : 2.5 V             :         : 4A        : N              
+outRom[13]                   : Y15       : output : 2.5 V             :         : 4A        : N              
+out_out_mult4_2X1_ram_ula[14] : Y16       : output : 2.5 V             :         : 4A        : N              
+outPc[14]                    : Y17       : output : 2.5 V             :         : 4A        : N              
 GND                          : Y18       : gnd    :                   :         :           :                
-out_out_mult4_2X1_ram_ula[14] : Y19       : output : 2.5 V             :         : 4A        : N              
-out_out_mult4_2X1_ram_ula[9] : Y20       : output : 2.5 V             :         : 4A        : N              
-outRam[12]                   : Y21       : output : 2.5 V             :         : 4A        : N              
-out_opcode[2]                : Y22       : output : 2.5 V             :         : 4A        : N              
+out_rd[1]                    : Y19       : output : 2.5 V             :         : 4A        : N              
+out_endereco[1]              : Y20       : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y21       :        :                   :         : 4A        :                
+outRom[1]                    : Y22       : output : 2.5 V             :         : 4A        : N              

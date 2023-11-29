@@ -14,8 +14,7 @@ ENTITY ram_memory IS
 END ram_memory;
 
 ARCHITECTURE Behavioral OF ram_memory is
-    -- array de 8 posições contendo vetores lógicos de 16bits
-    type mem_t is array (0 to 7) of std_logic_vector(15 downto 0); -- verificar
+    type mem_t is array (0 to 15) of std_logic_vector(15 downto 0); -- verificar
     signal mem : mem_t := (others => "0000000000000000");    
 BEGIN
 

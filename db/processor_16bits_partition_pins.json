@@ -68,75 +68,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "outRam[0]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[1]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[2]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[3]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[4]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[5]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[6]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[7]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[8]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[9]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[10]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[11]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[12]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[13]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[14]",
-					"strict" : false
-				},
-				{
-					"name" : "outRam[15]",
-					"strict" : false
-				},
-				{
 					"name" : "outRom[0]",
 					"strict" : false
 				},
 				{
-					"name" : "outRom[2]",
+					"name" : "outRom[1]",
 					"strict" : false
 				},
 				{
@@ -144,7 +80,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "outRom[6]",
+					"name" : "outRom[8]",
 					"strict" : false
 				},
 				{
@@ -152,11 +88,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "outRom[14]",
-					"strict" : false
-				},
-				{
-					"name" : "outRom[15]",
+					"name" : "outRom[13]",
 					"strict" : false
 				},
 				{
@@ -221,6 +153,10 @@
 				},
 				{
 					"name" : "outUla[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ula_overflow_out",
 					"strict" : false
 				},
 				{
@@ -356,11 +292,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "out_opcode[2]",
+					"name" : "out_opcode[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out_opcode[3]",
+					"name" : "out_rs[0]",
 					"strict" : false
 				},
 				{
@@ -368,7 +304,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "out_rt[2]",
+					"name" : "out_rd[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rd[1]",
 					"strict" : false
 				},
 				{
@@ -376,11 +316,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "out_endereco[2]",
+					"name" : "out_endereco[1]",
 					"strict" : false
 				},
 				{
-					"name" : "overflow",
+					"name" : "out_endereco[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_endereco[8]",
 					"strict" : false
 				},
 				{

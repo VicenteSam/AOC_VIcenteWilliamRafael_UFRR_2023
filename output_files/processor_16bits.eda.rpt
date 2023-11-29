@@ -1,5 +1,5 @@
 EDA Netlist Writer report for processor_16bits
-Tue Nov 28 16:11:07 2023
+Tue Nov 28 18:24:16 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Nov 28 16:11:07 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Nov 28 18:24:16 2023 ;
 ; Revision Name             ; processor_16bits                      ;
 ; Top-level Entity Name     ; Trinity                               ;
 ; Family                    ; Cyclone V                             ;
@@ -65,13 +65,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+----------------------------------------------------------------------------+
-; Simulation Generated Files                                                 ;
-+----------------------------------------------------------------------------+
-; Generated Files                                                            ;
-+----------------------------------------------------------------------------+
-; E:/IntelFPGA_lite/18.1/1trabalho_aoc/simulation/qsim//processor_16bits.vho ;
-+----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                           ;
++------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                      ;
++------------------------------------------------------------------------------------------------------+
+; E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim//processor_16bits.vho ;
++------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -93,14 +93,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Nov 28 16:11:05 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=E:/IntelFPGA_lite/18.1/1trabalho_aoc/simulation/qsim/ processor_16bits -c processor_16bits
+    Info: Processing started: Tue Nov 28 18:24:15 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim/ processor_16bits -c processor_16bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file processor_16bits.vho in folder "E:/IntelFPGA_lite/18.1/1trabalho_aoc/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file processor_16bits.vho in folder "E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Tue Nov 28 16:11:07 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Tue Nov 28 18:24:16 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

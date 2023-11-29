@@ -2,74 +2,107 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_unsigned.all;
 USE ieee.std_logic_arith.all;
+USE IEEE.NUMERIC_STD.ALL;
 
 ENTITY ula IS 
 	port(
-		selec : in std_logic_vector(3 downto 0);
+		Clock: 			in std_logic;
+		selec : in std_logic_vector(3 downto 0); --AluOp
 		inA 	: in  std_logic_vector(15 downto 0);
 		inB  	: in  std_logic_vector(15 downto 0);
 		Sout  : out std_logic_vector(15 downto 0);
-		s_zero: out std_logic;
-		overflow: out std_logic);
+		s_zero, overflow: out std_logic
+	);
 END ula;
 
-ARCHITECTURE Behavior OF ula IS
-	
-	COMPONENT zero IS
-		port(
-			in_port : in std_logic;
-			out_port : out std_logic
-		);
-	END COMPONENT;
+architecture Behavior of Ula is
 
-	
-	COMPONENT somador8bit IS
-		PORT ( busX : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-			 busY : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-			 Cin : IN STD_LOGIC;
-			 busS : out STD_LOGIC_VECTOR (15 DOWNTO 0);
-			 overflow : out STD_LOGIC);
-	END COMPONENT;
+SIGNAL SOMA,SUBTRACAO                     : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL OVERFLOW_SOMA,OVERFLOW_SUBTRACAO   : STD_LOGIC;
+SIGNAL IN_BRANCH_HELPER,OUT_BRANCH_HELPER : STD_LOGIC;
 
-	
-	 -- if para o beq e bne
-    SIGNAL in_temp_zero : std_logic;
-    SIGNAL out_temp_zero : std_logic;
-	 signal somadorOut, subtratorOut : std_logic_vector(15 downto 0);
-	 signal overflowSoma: std_logic;
+COMPONENT somador16bit IS
+	PORT(
+		A,B  : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		CIN  : IN STD_LOGIC;
+		COUT : OUT STD_LOGIC;
+		S    : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT subtrator16bit IS
+	PORT(
+		A,B  : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		COUT : OUT STD_LOGIC;
+		S    : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	);
+END COMPONENT;
+
+COMPONENT BRANCH_HELPER IS
+	PORT (
+	  A : IN STD_LOGIC;
+	  S : OUT STD_LOGIC
+	);
+END COMPONENT;
 
 BEGIN
-		
-		port_map_temp_zero : zero PORT MAP(in_temp_zero, out_temp_zero);
-		soma    : somador8bit port map(inA, inB,'0', somadorOut, overflowSoma);
-		
-		process(inA,inB,selec,out_temp_zero)
-		begin
-			case selec is  
-			when "0000" => --add
-					 Sout <= somadorOut;
-                overflow <= overflowSoma;
-			when "0001" => Sout <= inA + inB; --addi
-			when "0010" => Sout <= inA - inB; --subb
-			when "0011" => Sout <= inA - inB; --subbi
-			when "0100" => Sout <= inA;  --lw
-			when "0101" => Sout <= inA; --sw	
-			when "0110" => Sout <= inB; --li
-			when "0111" => --beq
-				if out_temp_zero = '1' then
-					s_zero <= '1';
-				else
-					s_zero <= '0';
-				end if;
+	BH  : BRANCH_HELPER PORT MAP(IN_BRANCH_HELPER, OUT_BRANCH_HELPER);
+	OP1 : somador16bit PORT MAP(inA, inB, '0', OVERFLOW_SOMA, SOMA);
+	OP2 : subtrator16bit PORT MAP(inA, inB, OVERFLOW_SUBTRACAO, SUBTRACAO);
+
+	PROCESS(Clock,selec,inA,inB,SOMA,SUBTRACAO,OVERFLOW_SOMA,OVERFLOW_SUBTRACAO,IN_BRANCH_HELPER,OUT_BRANCH_HELPER)
+	BEGIN
+		CASE selec IS
+			-- SOMA
+			WHEN "0000" =>
+				Sout        <= SOMA;
+				OVERFLOW <= OVERFLOW_SOMA;
+			-- SOMA IMEDIATA
+			WHEN "0001" =>
+				Sout        <= SOMA;
+				OVERFLOW <= OVERFLOW_SOMA;
+			-- SUBTRAÇÃO
+			WHEN "0010" =>
+				Sout        <= SUBTRACAO;
+				OVERFLOW <= OVERFLOW_SUBTRACAO;
+			-- SUBTRAÇÃO IMEDIATA
+			WHEN "0011" =>
+				Sout        <= SUBTRACAO;
+				OVERFLOW <= OVERFLOW_SUBTRACAO;
+			-- LW
+			WHEN "0100" =>
+				Sout        <= inA;
+				OVERFLOW <= '0';
+			-- SW
+			WHEN "0101" =>
+				Sout        <= inA;
+				OVERFLOW <= '0';
+			-- LI
+			WHEN "0110" =>
+				Sout        <= inB;
+				OVERFLOW <= '0';
+			-- BEQ
+			WHEN "0111" =>
+				IF OUT_BRANCH_HELPER = '1' THEN
+					s_zero     <= '1';
+				ELSE
+					s_zero     <= '0';
+				END IF;
+				Sout        <= "0000000000000000";
+				OVERFLOW <= '0';
+			-- IF
+			WHEN "1000" =>
+				IF inA = inB THEN
+					IN_BRANCH_HELPER <= '1';
+				ELSE
+					IN_BRANCH_HELPER <= '0';
+				END IF;
 				Sout <= "0000000000000000";
-			when "1000" => -- If
-				if inA = inB then
-					in_temp_zero <= '1';
-				else
-					in_temp_zero <= '0';
-				end if;
-				Sout <= "0000000000000000";
-			when others => Sout <= "0000000000000000";
-		end case;
-	end process;
-END Behavior;	
+				OVERFLOW <= '0';
+			-- J
+			WHEN OTHERS =>
+				Sout        <= "0000000000000000";
+				OVERFLOW <= '0';
+		END CASE;
+	END PROCESS;
+END;

@@ -101,7 +101,7 @@ R24
 R18
 R19
 Etrinity
-Z25 w1701202267
+Z25 w1701210256
 R2
 R3
 R4
@@ -111,7 +111,7 @@ R7
 R8
 R9
 R10
-R0
+Z26 dE:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/simulation/qsim
 R11
 R12
 l0
@@ -120,9 +120,9 @@ VUP33SSYCJ9P`h0FQM@JYX2
 !s100 kn=>oW?doKO^1ciIFZlkZ1
 R13
 32
-Z26 !s110 1701202270
+Z27 !s110 1701210258
 !i10b 1
-Z27 !s108 1701202269.000000
+Z28 !s108 1701210258.000000
 R16
 R17
 !i113 1
@@ -139,54 +139,54 @@ R8
 R9
 R10
 DEx4 work 7 trinity 0 22 UP33SSYCJ9P`h0FQM@JYX2
-l538
+l599
 L189
-VZkT>6OWeE=DAYJJ0T:RR>1
-!s100 hj0JO1<UL]kVeBdE85=BU0
+VI6KF[g2IUU0P_kWe3T;Qh0
+!s100 fC6P8dzIe2_^?0HD<I;>Q2
 R13
 32
-R26
-!i10b 1
 R27
+!i10b 1
+R28
 R16
 R17
 !i113 1
 R18
 R19
 Etrinity_vhd_vec_tst
-Z28 w1701202264
+Z29 w1701210255
 R8
 R9
-R0
-Z29 8Waveform2.vwf.vht
-Z30 FWaveform2.vwf.vht
+R26
+Z30 8Waveform3.vwf.vht
+Z31 FWaveform3.vwf.vht
 l0
 L31
 V4d`6klmKicY807ZmG@HWZ3
 !s100 m:CFA_S3l0;6_V;o7i9_W2
 R13
 32
-R26
+R27
 !i10b 1
-Z31 !s108 1701202270.000000
-Z32 !s90 -work|work|Waveform2.vwf.vht|
-Z33 !s107 Waveform2.vwf.vht|
+R28
+Z32 !s90 -work|work|Waveform3.vwf.vht|
+Z33 !s107 Waveform3.vwf.vht|
 !i113 1
 R18
 R19
 Atrinity_arch
 R8
 R9
-DEx4 work 19 trinity_vhd_vec_tst 0 22 4d`6klmKicY807ZmG@HWZ3
+Z34 DEx4 work 19 trinity_vhd_vec_tst 0 22 4d`6klmKicY807ZmG@HWZ3
 l66
 L33
 Vc>aTzI34bTXQ=B4lS4N:P0
 !s100 ^VNIIE;NXGH_^J`9^nT8a1
 R13
 32
-R26
+R27
 !i10b 1
-R31
+R28
 R32
 R33
 !i113 1

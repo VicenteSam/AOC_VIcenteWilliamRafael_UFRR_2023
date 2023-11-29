@@ -1,5 +1,5 @@
 Assembler report for processor_16bits
-Sun Nov 26 13:49:54 2023
+Tue Nov 28 23:37:57 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/IntelFPGA_lite/18.1/1trabalho_aoc/output_files/processor_16bits.sof
+  5. Assembler Device Options: E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/output_files/processor_16bits.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Nov 26 13:49:54 2023 ;
+; Assembler Status      ; Successful - Tue Nov 28 23:37:57 2023 ;
 ; Revision Name         ; processor_16bits                      ;
 ; Top-level Entity Name ; Trinity                               ;
 ; Family                ; Cyclone V                             ;
@@ -52,23 +52,23 @@ refer to the applicable agreement for further details.
 +--------+---------+---------------+
 
 
-+------------------------------------------------------------------------+
-; Assembler Generated Files                                              ;
-+------------------------------------------------------------------------+
-; File Name                                                              ;
-+------------------------------------------------------------------------+
-; E:/IntelFPGA_lite/18.1/1trabalho_aoc/output_files/processor_16bits.sof ;
-+------------------------------------------------------------------------+
-
-
 +--------------------------------------------------------------------------------------------------+
-; Assembler Device Options: E:/IntelFPGA_lite/18.1/1trabalho_aoc/output_files/processor_16bits.sof ;
-+----------------+---------------------------------------------------------------------------------+
-; Option         ; Setting                                                                         ;
-+----------------+---------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00F63D49                                                                      ;
-; Checksum       ; 0x00F63D49                                                                      ;
-+----------------+---------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                        ;
++--------------------------------------------------------------------------------------------------+
+; File Name                                                                                        ;
++--------------------------------------------------------------------------------------------------+
+; E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/output_files/processor_16bits.sof ;
++--------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: E:/IntelFPGA_lite/18.1/AOC_VIcenteWilliamRafael_UFRR_2023-main/output_files/processor_16bits.sof ;
++----------------+-----------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                   ;
++----------------+-----------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x00EFB381                                                                                                ;
+; Checksum       ; 0x00EFB381                                                                                                ;
++----------------+-----------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -77,14 +77,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 26 13:49:48 2023
+    Info: Processing started: Tue Nov 28 23:37:51 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off processor_16bits -c processor_16bits
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Sun Nov 26 13:49:54 2023
+    Info: Peak virtual memory: 4829 megabytes
+    Info: Processing ended: Tue Nov 28 23:37:57 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 
 

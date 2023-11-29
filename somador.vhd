@@ -11,8 +11,8 @@ entity somador is
 end somador;
 architecture main of somador is
 	begin
-	process(clock)
+	process(clock, inport)
 	begin
-		outPort <= inPort + "0000000000000001";
+		outPort <= inPort + "1";
 	end process;
 end main;

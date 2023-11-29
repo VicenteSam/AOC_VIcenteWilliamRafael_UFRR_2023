@@ -13,6 +13,7 @@ ENTITY Trinity IS
 		outRom : out std_logic_vector(15 downto 0);
 		-- ula
 		outUla : out std_logic_vector(15 downto 0);
+		ula_overflow_out : OUT STD_LOGIC;
 		-- banco de registradores
 		out_br_regA : out std_logic_vector(15 downto 0);
 		out_br_regB : out std_logic_vector(15 downto 0);
@@ -20,8 +21,8 @@ ENTITY Trinity IS
 		out_opcode : out std_logic_vector(3 downto 0);
 		out_rs : out std_logic_vector(3 downto 0);
 		out_rt : out std_logic_vector(3 downto 0);
-		out_endereco : out std_logic_vector(3 downto 0);
-		overflow        : out std_logic;
+		out_rd : out std_logic_vector(3 downto 0);
+		out_endereco : out std_logic_vector(15 downto 0);
 		out_out_mult4_2X1_ram_ula : out std_logic_vector(15 downto 0)
 	);
 END Trinity;
@@ -50,7 +51,8 @@ ARCHITECTURE Behavioral OF Trinity IS
         out_op_code: out std_logic_vector(3 downto 0);
         out_rs: out std_logic_vector(3 downto 0);
         out_rt: out std_logic_vector(3 downto 0);
-        out_jump: out std_logic_vector(3 downto 0)
+		  out_rd: out std_logic_vector(3 downto 0);
+        out_jump: out std_logic_vector(15 downto 0)
     );
 	end COMPONENT;
 	
@@ -101,12 +103,13 @@ ARCHITECTURE Behavioral OF Trinity IS
 	
 	COMPONENT ula IS 
 		port(
+		Clock: 			in std_logic;
 		selec : in std_logic_vector(3 downto 0);
 		inA 	: in  std_logic_vector(15 downto 0);
 		inB  	: in  std_logic_vector(15 downto 0);
 		Sout  : out std_logic_vector(15 downto 0);
-		s_zero: out std_logic;
-		overflow: out std_logic);
+		s_zero, overflow: out std_logic
+		);
 	end COMPONENT;
 	
 	COMPONENT and_gate IS
@@ -134,9 +137,10 @@ ARCHITECTURE Behavioral OF Trinity IS
 		escreveReg		: IN std_logic;
 		addressReg1		: IN std_logic_vector(3 DOWNTO 0);
 		addressReg2		: IN std_logic_vector(3 DOWNTO 0);
+		addressReg3		: IN std_logic_vector(3 DOWNTO 0);
 		escreveDado		: IN std_logic_vector(15 DOWNTO 0);
-		out_Reg1		: OUT std_logic_vector(15 DOWNTO 0);
-		out_Reg2		: OUT std_logic_vector(15 DOWNTO 0)
+		out_Reg2		: OUT std_logic_vector(15 DOWNTO 0);
+		out_Reg3		: OUT std_logic_vector(15 DOWNTO 0)
 	);
 	end COMPONENT;
 	
@@ -146,10 +150,10 @@ ARCHITECTURE Behavioral OF Trinity IS
 	--Add
 	signal out_addr: std_logic_vector(15 downto 0);
 	
-	--Extensor de sinal 2 para 8 bits
+	--Extensor de sinal 4 para 16 bits
 	signal out_ES_4_16: std_logic_vector(15 downto 0);
 	
-	--Extensor de sinal 4 para 8 bits
+	--Extensor de sinal 4 para 16 bits
 	signal out_ES_4_16_2: std_logic_vector(15 downto 0);
 	
 	--Porta AND
@@ -158,6 +162,7 @@ ARCHITECTURE Behavioral OF Trinity IS
 	--ULa
 	signal out_ula_result: std_logic_vector(15 downto 0);
 	signal out_ula_zero: std_logic;
+	signal ula_overflow : STD_LOGIC;
 	
 	--ram
 	signal out_ram: std_logic_vector(15 downto 0);
@@ -165,18 +170,19 @@ ARCHITECTURE Behavioral OF Trinity IS
 	--rom
 	signal out_rom: std_logic_vector(15 downto 0);
 	
-	-- identificador de overflow
-    signal estouroMEM : std_logic;
 	
 	--instruction division
-	signal out_di_7_4: std_logic_vector(15 downto 12);
-	signal out_di_3_2: std_logic_vector(11 downto 8);
-	signal out_di_1_0: std_logic_vector(7 downto 4);
+	signal opc: std_logic_vector(3 downto 0);
+	signal out_di_3_2: std_logic_vector(3 downto 0);
+	signal out_di_1_0: std_logic_vector(3 downto 0);
 	signal out_di_3_0: std_logic_vector(3 downto 0);
-	
+	signal addr: std_logic_vector(15 downto 0);
 	--banco de registradores
+	
 	signal out_br_reg_A: std_logic_vector(15 downto 0);
 	signal out_br_reg_B: std_logic_vector(15 downto 0);
+	signal out_br_reg_C: std_logic_vector(15 downto 0);
+	
 	
 	--multiplexador 2x1(mux1), que fica entre o Banco de registradores e a ula
 	signal out_mult1_2x1_br_ula : std_logic_vector(15 downto 0);
@@ -206,12 +212,12 @@ BEGIN
 	port_map_addr : somador port map (clock,out_pc,out_addr);
 	port_map_pc: PC port map (clock,out_port_map_mult3_2X1_jump,out_pc);
 	port_map_rom: rom_memory port map (out_pc,clock,out_rom);
-	port_map_divisao_intrucao : divisao_instrucao port map (out_rom,out_di_7_4,out_di_3_2,out_di_1_0,out_di_3_0);
-	port_map_unidade_de_controle: unidade_controle port map(clock,out_di_7_4,out_uc_j,out_uc_branch,out_uc_mem_read,out_uc_memto_reg,out_uc_ula_op,out_uc_mem_write,out_uc_ula_src,out_uc_reg_write);
-	port_map_banco_de_registradores: bancoRegistradores port map(clock,out_uc_reg_write,out_di_3_2,out_di_1_0,out_mult4_2x1_ram_ula,out_br_reg_A,out_br_reg_B);
-	port_map_extensor_sinal_4_16: bitExtensor4_16 port map (out_di_1_0,out_ES_4_16);
+	port_map_divisao_intrucao : divisao_instrucao port map (out_rom,opc,out_di_3_2,out_di_1_0,out_di_3_0,addr);
+	port_map_unidade_de_controle: unidade_controle port map(clock,opc,out_uc_j,out_uc_branch,out_uc_mem_read,out_uc_memto_reg,out_uc_ula_op,out_uc_mem_write,out_uc_ula_src,out_uc_reg_write);
+	port_map_banco_de_registradores: bancoRegistradores port map(clock,out_uc_reg_write,out_di_3_2,out_di_1_0,out_di_3_0,out_mult4_2x1_ram_ula,out_br_reg_A,out_br_reg_B);
+	port_map_extensor_sinal_4_16: bitExtensor4_16 port map (out_di_3_0,out_ES_4_16);
 	port_map_mult1_2x1_br_ula: multiplexador port map (out_uc_ula_src,out_br_reg_B,out_ES_4_16,out_mult1_2x1_br_ula);
-	port_map_ula: ula port map (out_uc_ula_op,out_br_reg_A,out_mult1_2x1_br_ula,out_ula_result,out_ula_zero,estouroMEM);
+	port_map_ula: ula port map (clock,out_uc_ula_op,out_br_reg_A,out_mult1_2x1_br_ula,out_ula_result,out_ula_zero, ula_overflow);
 	port_map_ram: ram_memory port map (clock,out_uc_mem_write,out_uc_mem_read,out_ula_result,out_ES_4_16,out_ram);
 	port_map_mult4_2x1_ram_ula: multiplexador port map (out_uc_memto_reg,out_ula_result,out_ram,out_mult4_2x1_ram_ula);
 	port_map_extensor_sinal_4_16_2: bitExtensor4_16_2 port map (out_di_3_0,out_ES_4_16_2);
@@ -222,15 +228,16 @@ BEGIN
 	-- Resultados das Saidas
 	outPc <= out_pc;
 	outRom <= out_rom;
-	out_opcode <= out_di_7_4;
+	out_opcode <= opc;
 	out_rs <= out_di_3_2;
 	out_rt <= out_di_1_0;
-	out_endereco <= out_di_3_0;
+	out_rd <= out_di_3_0;
+	out_endereco <= addr;
 	out_br_regA <= out_br_reg_A;
 	out_br_regB <= out_br_reg_B;
 	outUla <= out_ula_result;
+	ula_overflow_out <= ula_overflow;
 	outRam <= out_ram;
 	out_out_mult4_2X1_ram_ula <= out_mult4_2x1_ram_ula;
-	overflow <= estouroMEM;
 	
 END Behavioral;

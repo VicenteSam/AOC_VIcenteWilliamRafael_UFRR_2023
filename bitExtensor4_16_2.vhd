@@ -13,6 +13,6 @@ ARCHITECTURE Behavior OF bitExtensor4_16_2 IS
 BEGIN
 	PROCESS (in_data)
 	BEGIN 
-		s <= ("000000000000") & in_data;	
+		s <= ("000000000000") & in_data;	--verificar
 	END PROCESS;
 END Behavior;
