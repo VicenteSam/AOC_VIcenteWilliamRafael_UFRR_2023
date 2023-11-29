@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Nov 28 23:37:08 2023
+Analysis & Synthesis Status : Successful - Wed Nov 29 10:00:46 2023
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : processor_16bits
 Top-level Entity Name : Trinity
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 32
+Total registers : 48
 Total pins : 146
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 64
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

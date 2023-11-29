@@ -18,9 +18,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/24/2023 01:12:25"
+-- Generated on "11/29/2023 00:18:07"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          Qualcom_LI
+-- Vhdl Test Bench(with test vectors) for design  :          Trinity
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -28,43 +28,45 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY Qualcom_LI_vhd_vec_tst IS
-END Qualcom_LI_vhd_vec_tst;
-ARCHITECTURE Qualcom_LI_arch OF Qualcom_LI_vhd_vec_tst IS
+ENTITY Trinity_vhd_vec_tst IS
+END Trinity_vhd_vec_tst;
+ARCHITECTURE Trinity_arch OF Trinity_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clock : STD_LOGIC;
 SIGNAL out_br_regA : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL out_br_regB : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL out_endereco : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL out_endereco : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL out_opcode : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL out_out_mult4_2X1_ram_ula : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL out_rd : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL out_rs : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL out_rt : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL outPc : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL outRam : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL outRom : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL outUla : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL overflow : STD_LOGIC;
-COMPONENT Qualcom_LI
+SIGNAL ula_overflow_out : STD_LOGIC;
+COMPONENT Trinity
 	PORT (
 	clock : IN STD_LOGIC;
 	out_br_regA : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	out_br_regB : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
-	out_endereco : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
+	out_endereco : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	out_opcode : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
 	out_out_mult4_2X1_ram_ula : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	out_rd : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
 	out_rs : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
 	out_rt : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
 	outPc : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	outRam : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	outRom : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
 	outUla : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
-	overflow : BUFFER STD_LOGIC
+	ula_overflow_out : BUFFER STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
-	i1 : Qualcom_LI
+	i1 : Trinity
 	PORT MAP (
 -- list connections between master ports and signals
 	clock => clock,
@@ -73,19 +75,25 @@ BEGIN
 	out_endereco => out_endereco,
 	out_opcode => out_opcode,
 	out_out_mult4_2X1_ram_ula => out_out_mult4_2X1_ram_ula,
+	out_rd => out_rd,
 	out_rs => out_rs,
 	out_rt => out_rt,
 	outPc => outPc,
 	outRam => outRam,
 	outRom => outRom,
 	outUla => outUla,
-	overflow => overflow
+	ula_overflow_out => ula_overflow_out
 	);
 
 -- clock
 t_prcs_clock: PROCESS
 BEGIN
+LOOP
 	clock <= '0';
-WAIT;
+	WAIT FOR 5000 ps;
+	clock <= '1';
+	WAIT FOR 5000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clock;
-END Qualcom_LI_arch;
+END Trinity_arch;
