@@ -41,7 +41,7 @@
  
 
 ##  RTL View
-
+![RTL View Processador Trinity](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/RTL%20View/rtl%20view.png)
  
  [PNG](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/RTL%20View/rtl%20view.png)
  
