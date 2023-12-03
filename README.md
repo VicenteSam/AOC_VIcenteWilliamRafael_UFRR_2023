@@ -25,9 +25,9 @@
 ##  Componentes
 
 - [Processador Trinity](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/Componentes/Trinity.vhd)
- - [ULA](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/ula.vhd)
- - [Unidade de Controle](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/unidade_controle.vhd)
-- [Banco de Registradores](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/bancoRegistradores.vhd)
+ - [ULA](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/Componentes/ula.vhd)
+ - [Unidade de Controle](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/Componentes/unidade_controle.vhd)
+- [Banco de Registradores](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/Componentes/bancoRegistradores.vhd)
 - [Memória Ram](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/Componentes/ram_memory.vhd)
 - [Memória Rom](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/Componentes/rom_memory.vhd)
 - [Program Counter](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/Componentes/PC.vhd)
