@@ -1,6 +1,8 @@
 # Processador Trinity
-![Logo do Processador](https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/logo/logo%20trinity.png)
->
+
+<p align="center">
+  <img width="500" height="500" src="https://github.com/VicenteSam/AOC_VIcenteWilliamRafael_UFRR_2023/blob/main/logo/logo%20trinity.png">
+</p>
 
 ## Processador Trinity
 
